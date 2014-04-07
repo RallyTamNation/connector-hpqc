@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<config>
+   <RallyConnection>
+      <Url>demo02.rallydev.com</Url>
+      <WorkspaceName>Integrations</WorkspaceName>
+      <Projects>
+        <Project>Shopping Team</Project>
+      </Projects>
+      <User>sara@acme.com</User>
+      <Password>encoded-U-m-F-s-b-H-l-P-T-i-E-=-</Password>
+      <ArtifactType>Defect</ArtifactType>
+      <ExternalIDField>QCDefectID</ExternalIDField>
+   </RallyConnection>
+	
+   <QCConnection>
+      <Url>vmwin2008qc11:8080</Url>
+      <Domain>DEMO</Domain>
+      <Project>DEMO1</Project>
+      <User>sara</User>
+      <Password>encoded-c-m-F-s-b-H-l-k-Z-X-Y-=-</Password>
+      <ArtifactType>BUG</ArtifactType>
+      <IDField>BG_BUG_ID</IDField>
+      <ExternalIDField>BG_USER_01</ExternalIDField>
+      <ExternalEndUserIDField>BG_USER_03</ExternalEndUserIDField> <!-- Rally Formatted ID -->
+      <CopySelectors>
+        <CopySelector>BG_USER_02 = Y</CopySelector>
+		
+      </CopySelectors>
+   </QCConnection>
+
+   <Connector>
+    <FieldMapping>
+	<Field><Rally>Name</Rally>          <Other>BG_SUMMARY</Other></Field>
+	<Field><Rally>Description</Rally>   <Other>BG_DESCRIPTION</Other></Field>
+    <Field><Rally>Notes</Rally>         <Other>BG_DEV_COMMENTS</Other><Direction>TO_OTHER</Direction></Field>
+	<Field><Rally>Severity</Rally>      <Other>BG_SEVERITY</Other></Field>
+	<Field><Rally>Priority</Rally>      <Other>BG_PRIORITY</Other></Field>
+	<Field><Rally>SubmittedBy</Rally>   <Other>BG_DETECTED_BY</Other></Field>
+	<Field><Rally>Owner</Rally>         <Other>BG_RESPONSIBLE</Other></Field>
+	<Field><Rally>State</Rally>         <Other>BG_STATUS</Other></Field>
+	<Field><Rally>FoundInBuild</Rally>  <Other>BG_DETECTION_VERSION</Other></Field>
+	<Field><Rally>TargetBuild</Rally>   <Other>BG_PLANNED_CLOSING_VER</Other></Field>
+    <!--<Field><Rally>QCAttachments</Rally> <Other>BG_ATTACHMENT</Other><Direction>TO_RALLY</Direction></Field>-->``
+    </FieldMapping>
+	
+	<OtherFieldHandlers>
+
+	  <QCRtfFieldHandler>
+	    <FieldName>BG_DESCRIPTION</FieldName>
+	  </QCRtfFieldHandler>
+	
+	  <OtherUserFieldHandler>
+	    <FieldName>BG_DETECTED_BY</FieldName>
+	    <Domain>acme.com</Domain>
+	  </OtherUserFieldHandler>
+	  
+	  <OtherUserFieldHandler>
+	    <FieldName>BG_RESPONSIBLE</FieldName>
+	    <Domain>acme.com</Domain>
+	  </OtherUserFieldHandler>
+
+         <!-- <QCUrlAttachmentFieldHandler>
+            <FieldName>BG_ATTACHMENT</FieldName>
+          </QCUrlAttachmentFieldHandler> -->
+			
+	  <OtherEnumFieldHandler>
+  	    <FieldName>BG_SEVERITY</FieldName>
+	    <Mappings>
+		    <Field><Rally>Cosmetic</Rally>        <Other>Cosmetic</Other></Field>
+		    <Field><Rally>Minor Problem</Rally>   <Other>Minor Problem</Other></Field>
+		    <Field><Rally>Major Problem</Rally>   <Other>Major Problem</Other></Field>
+		    <Field><Rally>Crash/Data Loss</Rally> <Other>Crash/Data Loss</Other></Field>
+		    <Field><Rally>None</Rally>            <Other>None</Other></Field>
+            </Mappings>
+
+	  </OtherEnumFieldHandler>
+
+	  <OtherEnumFieldHandler>
+  	    <FieldName>BG_STATUS</FieldName>
+	    <Mappings>
+		    <Field><Rally>Submitted</Rally> <Other>New</Other></Field>
+		    <Field><Rally>Open</Rally>      <Other>Open</Other></Field>
+		    <Field><Rally>Reopened</Rally>  <Other>Reopen</Other></Field>
+		    <Field><Rally>Fixed</Rally>     <Other>Fixed</Other></Field>
+		    <Field><Rally>Closed</Rally>    <Other>Closed</Other></Field>
+            <Field><Rally>Closed</Rally>    <Other>Rejected</Other></Field>
+        </Mappings>
+	  </OtherEnumFieldHandler>
+
+	  <OtherEnumFieldHandler>
+  	    <FieldName>BG_PRIORITY</FieldName>
+	    <Mappings>
+		    <Field><Rally>Resolve Immediately</Rally>  <Other>Resolve Immediately</Other></Field>
+		    <Field><Rally>High Attention</Rally>       <Other>High Attention</Other></Field>
+		    <Field><Rally>Normal</Rally>               <Other>Normal</Other></Field>
+                    <Field><Rally>Low</Rally>                  <Other>Low</Other></Field>
+            </Mappings>
+	  </OtherEnumFieldHandler>
+    </OtherFieldHandlers>
+  </Connector>
+ 
+  <ConnectorRunner>
+        <Preview>false</Preview>
+        <LogLevel>Info</LogLevel>
+        <Services>UPDATE_RALLY_TO_OTHER,UPDATE_OTHER_TO_RALLY, COPY_OTHER_TO_RALLY</Services>
+    </ConnectorRunner>
+</config>

@@ -1,0 +1,916 @@
+# Logfile created on 2014-02-06 09:43:50 -0700 by logger.rb/25413
+
+************************************************************************************************************
+
+     rally2_qc_connector
+         pid: 3032   
+         starting at: 2014-02-06 16:43:56 Z
+         cwd: C:/Program Files/RallyConnectorforQualityCenter_DEFECTS
+         configs: qc_config_defects.xml
+         interval: -1
+
+************************************************************************************************************
+
+[2014-02-06 16:43:56 Z]   ANY : ConnectorRunner.block in run - processing to commence using content from qc_config_defects.xml
+[2014-02-06 16:43:56 Z]  INFO : Class.read_config_file - qc_config_defects.xml last modified 2014-01-29 14:12:32 UTC, size: 4362 chars
+[2014-02-06 16:43:56 Z]  INFO : RallyConnection.initialize - Initializing Rally connection version 2.7.9
+[2014-02-06 16:43:56 Z]  INFO : RallyConnection.initialize - Rally Web Services version 1.16
+[2014-02-06 16:43:56 Z]  INFO : QCConnection.initialize - Initializing Quality Center connection version 2.7.9
+[2014-02-06 16:43:56 Z]  INFO : Connector.initialize - Ruby platform i386-mingw32
+[2014-02-06 16:43:56 Z]  INFO : Connector.initialize - Ruby version 1.9.2
+[2014-02-06 16:43:56 Z]  INFO : QCConnection.connect - Connecting to Quality Center
+[2014-02-06 16:43:56 Z]  INFO : QCConnection.connect - Connected to Quality Center at http://vmwin2008qc11:8080/qcbin/wcomsrv.dll (version 11.0.0.8258)
+[2014-02-06 16:43:57 Z]  INFO : QCConnection.connect -   Domain: DEMO
+[2014-02-06 16:43:57 Z]  INFO : QCConnection.connect -   Project: DEMO1
+[2014-02-06 16:43:57 Z]  INFO : RallyConnection.connect - Connecting to Rally
+[2014-02-06 16:44:04 Z]  INFO : RallyConnection.connect - Connected to Rally at https://demo01.rallydev.com/slm -  Workspace: Integrations
+[2014-02-06 16:44:04 Z]  INFO : RallyConnection.connect -   Projects: Shopping Team
+[2014-02-06 16:44:04 Z]  INFO : Connector.validate - Beginning validation
+[2014-02-06 16:44:07 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://demo01.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-01-14.</OperationResultWarning>
+  </Warnings>
+[2014-02-06 16:44:09 Z]  INFO : Connector.validate - Validation complete
+[2014-02-06 16:44:09 Z]  INFO : ConnectorRunner.run_services - Last Run 2014-02-06 16:40:50 UTC  --- Now 2014-02-06 16:44:09 UTC
+[2014-02-06 16:44:09 Z]  INFO : ConnectorRunner.process_service - Starting Service UPDATE_RALLY_TO_QUALITY CENTER
+[2014-02-06 16:44:09 Z]  INFO : RallyConnection.find_updates - Find Rally defects updated after 2014-02-06 16:40:45 UTC (last run time - epsilon seconds)
+[2014-02-06 16:44:09 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://demo01.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-01-14.</OperationResultWarning>
+  </Warnings>
+[2014-02-06 16:44:10 Z]  INFO : RallyConnection.find_updates -   Found 1 updated defects in Rally
+[2014-02-06 16:44:10 Z]  WARN : OtherEnumFieldHandler.transform_in - For BG_PRIORITY field could not transform_in(None)
+[2014-02-06 16:44:10 Z]  INFO : QCConnection.update_internal -   Updated bug 121 in QC
+[2014-02-06 16:44:10 Z]  INFO : Connector.update_other - Quality Center bug 121 updated from Rally defect DE17
+[2014-02-06 16:44:10 Z]  INFO : ConnectorRunner.process_service - Finished Service UPDATE_RALLY_TO_QUALITY CENTER
+[2014-02-06 16:44:10 Z]  INFO : ConnectorRunner.process_service - Starting Service UPDATE_QUALITY CENTER_TO_RALLY
+[2014-02-06 16:44:10 Z]  INFO : QCConnection.find_updates - Looking for updates made after QC server time of: '2014-02-06 09:41:02'
+[2014-02-06 16:44:10 Z]  INFO : QCConnection.find_updates -   Found 1 Updated bugs in QC
+[2014-02-06 16:44:10 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://demo01.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-01-14.</OperationResultWarning>
+  </Warnings>
+[2014-02-06 16:44:10 Z]  WARN : OtherEnumFieldHandler.transform_out - For BG_PRIORITY field could not transform_out()
+[2014-02-06 16:44:10 Z]  INFO : RallyConnection.update_internal -   Updating DE17
+[2014-02-06 16:44:11 Z]  INFO : Connector.update_rally - Rally defect DE17 updated from Quality Center bug 121
+[2014-02-06 16:44:11 Z]  INFO : ConnectorRunner.process_service - Finished Service UPDATE_QUALITY CENTER_TO_RALLY
+[2014-02-06 16:44:11 Z]  INFO : ConnectorRunner.process_service - Starting Service COPY_QUALITY CENTER_TO_RALLY
+[2014-02-06 16:44:11 Z]  INFO : QCConnection.find_new - find_new query: BG_USER_01 ="" and BG_USER_02 ="Y"
+[2014-02-06 16:44:11 Z]  INFO : QCConnection.find_new -   Found 0 New bugs in QC
+[2014-02-06 16:44:11 Z]  INFO : ConnectorRunner.process_service - Finished Service COPY_QUALITY CENTER_TO_RALLY
+[2014-02-06 16:44:11 Z]  INFO : QCConnection.disconnect - Disconnected from Quality Center
+[2014-02-06 16:44:11 Z]  INFO : ConnectorRunner.run_services - time file written with value of 2014-02-06 16:44:09 UTC
+[2014-02-06 16:44:11 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 1 items updated from Rally to Quality center 
+[2014-02-06 16:44:11 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 1 items updated from Quality center to Rally 
+[2014-02-06 16:44:11 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 0 items copied from Quality center to Rally 
+[2014-02-06 16:44:11 Z]  INFO : ConnectorRunner.log_service_statistics - qc_config_defects.xml: service run took 15 seconds
+
+************************************************************************************************************
+
+     rally2_qc_connector
+         pid: 3596   
+         starting at: 2014-02-07 14:56:41 Z
+         cwd: C:/Program Files/RallyConnectorforQualityCenter_DEFECTS
+         configs: qc_config_defects.xml
+         interval: -1
+
+************************************************************************************************************
+
+[2014-02-07 14:56:41 Z]   ANY : ConnectorRunner.block in run - processing to commence using content from qc_config_defects.xml
+[2014-02-07 14:56:41 Z]  INFO : Class.read_config_file - qc_config_defects.xml last modified 2014-02-06 16:52:04 UTC, size: 4363 chars
+[2014-02-07 14:56:41 Z]  INFO : RallyConnection.initialize - Initializing Rally connection version 2.7.9
+[2014-02-07 14:56:41 Z]  INFO : RallyConnection.initialize - Rally Web Services version 1.16
+[2014-02-07 14:56:41 Z]  INFO : QCConnection.initialize - Initializing Quality Center connection version 2.7.9
+[2014-02-07 14:56:41 Z]  INFO : Connector.initialize - Ruby platform i386-mingw32
+[2014-02-07 14:56:41 Z]  INFO : Connector.initialize - Ruby version 1.9.2
+[2014-02-07 14:56:41 Z]  INFO : QCConnection.connect - Connecting to Quality Center
+[2014-02-07 14:56:42 Z]  INFO : QCConnection.connect - Connected to Quality Center at http://vmwin2008qc11:8080/qcbin/wcomsrv.dll (version 11.0.0.8258)
+[2014-02-07 14:56:44 Z]  INFO : QCConnection.connect -   Domain: DEMO
+[2014-02-07 14:56:44 Z]  INFO : QCConnection.connect -   Project: DEMO1
+[2014-02-07 14:56:44 Z]  INFO : RallyConnection.connect - Connecting to Rally
+[2014-02-07 14:56:50 Z]  INFO : RallyConnection.connect - Connected to Rally at https://demo01.rallydev.com/slm -  Workspace: Integrations
+[2014-02-07 14:56:50 Z]  INFO : RallyConnection.connect -   Projects: Shopping Team
+[2014-02-07 14:56:50 Z]  INFO : Connector.validate - Beginning validation
+[2014-02-07 14:56:53 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://demo01.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-01-15.</OperationResultWarning>
+  </Warnings>
+[2014-02-07 14:56:55 Z]  INFO : Connector.validate - Validation complete
+[2014-02-07 14:56:55 Z]  INFO : ConnectorRunner.run_services - Last Run 2014-02-06 16:44:09 UTC  --- Now 2014-02-07 14:56:55 UTC
+[2014-02-07 14:56:55 Z]  INFO : ConnectorRunner.process_service - Starting Service UPDATE_RALLY_TO_QUALITY CENTER
+[2014-02-07 14:56:55 Z]  INFO : RallyConnection.find_updates - Find Rally defects updated after 2014-02-06 16:44:04 UTC (last run time - epsilon seconds)
+[2014-02-07 14:56:55 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://demo01.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-01-15.</OperationResultWarning>
+  </Warnings>
+[2014-02-07 14:56:55 Z]  INFO : RallyConnection.find_updates -   Found 0 updated defects in Rally
+[2014-02-07 14:56:55 Z]  INFO : ConnectorRunner.process_service - Finished Service UPDATE_RALLY_TO_QUALITY CENTER
+[2014-02-07 14:56:55 Z]  INFO : ConnectorRunner.process_service - Starting Service UPDATE_QUALITY CENTER_TO_RALLY
+[2014-02-07 14:56:55 Z]  INFO : QCConnection.find_updates - Looking for updates made after QC server time of: '2014-02-06 09:44:26'
+[2014-02-07 14:56:55 Z]  INFO : QCConnection.find_updates -   Found 0 Updated bugs in QC
+[2014-02-07 14:56:55 Z]  INFO : ConnectorRunner.process_service - Finished Service UPDATE_QUALITY CENTER_TO_RALLY
+[2014-02-07 14:56:55 Z]  INFO : ConnectorRunner.process_service - Starting Service COPY_QUALITY CENTER_TO_RALLY
+[2014-02-07 14:56:55 Z]  INFO : QCConnection.find_new - find_new query: BG_USER_01 ="" and BG_USER_02 ="Y"
+[2014-02-07 14:56:55 Z]  INFO : QCConnection.find_new -   Found 1 New bugs in QC
+[2014-02-07 14:56:55 Z]  INFO : Connector.copy_to_rally - Copy to Rally
+[2014-02-07 14:56:55 Z]  WARN : OtherEnumFieldHandler.transform_out - For BG_PRIORITY field could not transform_out()
+[2014-02-07 14:56:57 Z]  INFO : RallyConnection.create_internal -   Created DE17
+[2014-02-07 14:56:57 Z]  INFO : Connector.copy_to_rally - Quality Center bug 122 copied to Rally defect DE17
+[2014-02-07 14:56:57 Z]  INFO : ConnectorRunner.process_service - Finished Service COPY_QUALITY CENTER_TO_RALLY
+[2014-02-07 14:56:58 Z]  INFO : QCConnection.disconnect - Disconnected from Quality Center
+[2014-02-07 14:56:58 Z]  INFO : ConnectorRunner.run_services - time file written with value of 2014-02-07 14:56:55 UTC
+[2014-02-07 14:56:58 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 0 items updated from Rally to Quality center 
+[2014-02-07 14:56:58 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 0 items updated from Quality center to Rally 
+[2014-02-07 14:56:58 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 1 items copied from Quality center to Rally 
+[2014-02-07 14:56:58 Z]  INFO : ConnectorRunner.log_service_statistics - qc_config_defects.xml: service run took 17 seconds
+
+************************************************************************************************************
+
+     rally2_qc_connector
+         pid: 3516   
+         starting at: 2014-02-07 17:10:11 Z
+         cwd: C:/Program Files/RallyConnectorforQualityCenter_DEFECTS
+         configs: qc_config_defects.xml
+         interval: -1
+
+************************************************************************************************************
+
+[2014-02-07 17:10:12 Z]   ANY : ConnectorRunner.block in run - processing to commence using content from qc_config_defects.xml
+[2014-02-07 17:10:12 Z]  INFO : Class.read_config_file - qc_config_defects.xml last modified 2014-02-06 16:52:04 UTC, size: 4363 chars
+[2014-02-07 17:10:12 Z]  INFO : RallyConnection.initialize - Initializing Rally connection version 2.7.9
+[2014-02-07 17:10:12 Z]  INFO : RallyConnection.initialize - Rally Web Services version 1.16
+[2014-02-07 17:10:12 Z]  INFO : QCConnection.initialize - Initializing Quality Center connection version 2.7.9
+[2014-02-07 17:10:12 Z]  INFO : Connector.initialize - Ruby platform i386-mingw32
+[2014-02-07 17:10:12 Z]  INFO : Connector.initialize - Ruby version 1.9.2
+[2014-02-07 17:10:12 Z]  INFO : QCConnection.connect - Connecting to Quality Center
+[2014-02-07 17:10:12 Z]  INFO : QCConnection.connect - Connected to Quality Center at http://vmwin2008qc11:8080/qcbin/wcomsrv.dll (version 11.0.0.8258)
+[2014-02-07 17:10:13 Z]  INFO : QCConnection.connect -   Domain: DEMO
+[2014-02-07 17:10:13 Z]  INFO : QCConnection.connect -   Project: DEMO1
+[2014-02-07 17:10:13 Z]  INFO : RallyConnection.connect - Connecting to Rally
+[2014-02-07 17:10:19 Z]  INFO : RallyConnection.connect - Connected to Rally at https://demo01.rallydev.com/slm -  Workspace: Integrations
+[2014-02-07 17:10:19 Z]  INFO : RallyConnection.connect -   Projects: Shopping Team
+[2014-02-07 17:10:19 Z]  INFO : Connector.validate - Beginning validation
+[2014-02-07 17:10:22 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://demo01.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-01-15.</OperationResultWarning>
+  </Warnings>
+[2014-02-07 17:10:24 Z]  INFO : Connector.validate - Validation complete
+[2014-02-07 17:10:24 Z]  INFO : ConnectorRunner.run_services - Last Run 2014-02-07 14:56:55 UTC  --- Now 2014-02-07 17:10:24 UTC
+[2014-02-07 17:10:24 Z]  INFO : ConnectorRunner.process_service - Starting Service UPDATE_RALLY_TO_QUALITY CENTER
+[2014-02-07 17:10:24 Z]  INFO : RallyConnection.find_updates - Find Rally defects updated after 2014-02-07 14:56:50 UTC (last run time - epsilon seconds)
+[2014-02-07 17:10:25 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://demo01.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-01-15.</OperationResultWarning>
+  </Warnings>
+[2014-02-07 17:10:25 Z]  INFO : RallyConnection.find_updates -   Found 0 updated defects in Rally
+[2014-02-07 17:10:25 Z]  INFO : ConnectorRunner.process_service - Finished Service UPDATE_RALLY_TO_QUALITY CENTER
+[2014-02-07 17:10:25 Z]  INFO : ConnectorRunner.process_service - Starting Service UPDATE_QUALITY CENTER_TO_RALLY
+[2014-02-07 17:10:25 Z]  INFO : QCConnection.find_updates - Looking for updates made after QC server time of: '2014-02-07 07:57:11'
+[2014-02-07 17:10:25 Z]  INFO : QCConnection.find_updates -   Found 1 Updated bugs in QC
+[2014-02-07 17:10:26 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://demo01.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-01-15.</OperationResultWarning>
+  </Warnings>
+[2014-02-07 17:10:26 Z]  WARN : OtherEnumFieldHandler.transform_out - For BG_PRIORITY field could not transform_out()
+[2014-02-07 17:10:26 Z]  INFO : RallyConnection.update_internal -   Updating DE17
+[2014-02-07 17:10:26 Z]  INFO : Connector.update_rally - Rally defect DE17 updated from Quality Center bug 122
+[2014-02-07 17:10:26 Z]  INFO : ConnectorRunner.process_service - Finished Service UPDATE_QUALITY CENTER_TO_RALLY
+[2014-02-07 17:10:26 Z]  INFO : ConnectorRunner.process_service - Starting Service COPY_QUALITY CENTER_TO_RALLY
+[2014-02-07 17:10:26 Z]  INFO : QCConnection.find_new - find_new query: BG_USER_01 ="" and BG_USER_02 ="Y"
+[2014-02-07 17:10:26 Z]  INFO : QCConnection.find_new -   Found 1 New bugs in QC
+[2014-02-07 17:10:26 Z]  INFO : Connector.copy_to_rally - Copy to Rally
+[2014-02-07 17:10:26 Z]  WARN : OtherEnumFieldHandler.transform_out - For BG_PRIORITY field could not transform_out()
+[2014-02-07 17:10:27 Z]  INFO : RallyConnection.create_internal -   Created DE18
+[2014-02-07 17:10:28 Z]  INFO : Connector.copy_to_rally - Quality Center bug 123 copied to Rally defect DE18
+[2014-02-07 17:10:28 Z]  INFO : ConnectorRunner.process_service - Finished Service COPY_QUALITY CENTER_TO_RALLY
+[2014-02-07 17:10:28 Z]  INFO : QCConnection.disconnect - Disconnected from Quality Center
+[2014-02-07 17:10:28 Z]  INFO : ConnectorRunner.run_services - time file written with value of 2014-02-07 17:10:24 UTC
+[2014-02-07 17:10:28 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 0 items updated from Rally to Quality center 
+[2014-02-07 17:10:28 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 1 items updated from Quality center to Rally 
+[2014-02-07 17:10:28 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 1 items copied from Quality center to Rally 
+[2014-02-07 17:10:28 Z]  INFO : ConnectorRunner.log_service_statistics - qc_config_defects.xml: service run took 16 seconds
+
+************************************************************************************************************
+
+     rally2_qc_connector
+         pid: 2120   
+         starting at: 2014-02-07 17:12:59 Z
+         cwd: C:/Program Files/RallyConnectorforQualityCenter_DEFECTS
+         configs: qc_config_defects.xml
+         interval: -1
+
+************************************************************************************************************
+
+[2014-02-07 17:12:59 Z]   ANY : ConnectorRunner.block in run - processing to commence using content from qc_config_defects.xml
+[2014-02-07 17:12:59 Z]  INFO : Class.read_config_file - qc_config_defects.xml last modified 2014-02-06 16:52:04 UTC, size: 4363 chars
+[2014-02-07 17:12:59 Z]  INFO : RallyConnection.initialize - Initializing Rally connection version 2.7.9
+[2014-02-07 17:12:59 Z]  INFO : RallyConnection.initialize - Rally Web Services version 1.16
+[2014-02-07 17:12:59 Z]  INFO : QCConnection.initialize - Initializing Quality Center connection version 2.7.9
+[2014-02-07 17:12:59 Z]  INFO : Connector.initialize - Ruby platform i386-mingw32
+[2014-02-07 17:12:59 Z]  INFO : Connector.initialize - Ruby version 1.9.2
+[2014-02-07 17:12:59 Z]  INFO : QCConnection.connect - Connecting to Quality Center
+[2014-02-07 17:12:59 Z]  INFO : QCConnection.connect - Connected to Quality Center at http://vmwin2008qc11:8080/qcbin/wcomsrv.dll (version 11.0.0.8258)
+[2014-02-07 17:13:00 Z]  INFO : QCConnection.connect -   Domain: DEMO
+[2014-02-07 17:13:00 Z]  INFO : QCConnection.connect -   Project: DEMO1
+[2014-02-07 17:13:00 Z]  INFO : RallyConnection.connect - Connecting to Rally
+[2014-02-07 17:13:06 Z]  INFO : RallyConnection.connect - Connected to Rally at https://demo01.rallydev.com/slm -  Workspace: Integrations
+[2014-02-07 17:13:06 Z]  INFO : RallyConnection.connect -   Projects: Shopping Team
+[2014-02-07 17:13:06 Z]  INFO : Connector.validate - Beginning validation
+[2014-02-07 17:13:09 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://demo01.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-01-15.</OperationResultWarning>
+  </Warnings>
+[2014-02-07 17:13:11 Z]  INFO : Connector.validate - Validation complete
+[2014-02-07 17:13:11 Z]  INFO : ConnectorRunner.run_services - Last Run 2014-02-07 17:10:24 UTC  --- Now 2014-02-07 17:13:11 UTC
+[2014-02-07 17:13:11 Z]  INFO : ConnectorRunner.process_service - Starting Service UPDATE_RALLY_TO_QUALITY CENTER
+[2014-02-07 17:13:11 Z]  INFO : RallyConnection.find_updates - Find Rally defects updated after 2014-02-07 17:10:19 UTC (last run time - epsilon seconds)
+[2014-02-07 17:13:11 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://demo01.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-01-15.</OperationResultWarning>
+  </Warnings>
+[2014-02-07 17:13:12 Z]  INFO : RallyConnection.find_updates -   Found 1 updated defects in Rally
+[2014-02-07 17:13:12 Z]  WARN : OtherEnumFieldHandler.transform_in - For BG_PRIORITY field could not transform_in(None)
+[2014-02-07 17:13:12 Z]  INFO : QCConnection.update_internal -   Updated bug 123 in QC
+[2014-02-07 17:13:12 Z]  INFO : Connector.update_other - Quality Center bug 123 updated from Rally defect DE18
+[2014-02-07 17:13:12 Z]  INFO : ConnectorRunner.process_service - Finished Service UPDATE_RALLY_TO_QUALITY CENTER
+[2014-02-07 17:13:12 Z]  INFO : ConnectorRunner.process_service - Starting Service UPDATE_QUALITY CENTER_TO_RALLY
+[2014-02-07 17:13:12 Z]  INFO : QCConnection.find_updates - Looking for updates made after QC server time of: '2014-02-07 10:10:40'
+[2014-02-07 17:13:12 Z]  INFO : QCConnection.find_updates -   Found 1 Updated bugs in QC
+[2014-02-07 17:13:12 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://demo01.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-01-15.</OperationResultWarning>
+  </Warnings>
+[2014-02-07 17:13:12 Z]  WARN : OtherEnumFieldHandler.transform_out - For BG_PRIORITY field could not transform_out()
+[2014-02-07 17:13:12 Z]  INFO : RallyConnection.update_internal -   Updating DE18
+[2014-02-07 17:13:13 Z]  INFO : Connector.update_rally - Rally defect DE18 updated from Quality Center bug 123
+[2014-02-07 17:13:13 Z]  INFO : ConnectorRunner.process_service - Finished Service UPDATE_QUALITY CENTER_TO_RALLY
+[2014-02-07 17:13:13 Z]  INFO : ConnectorRunner.process_service - Starting Service COPY_QUALITY CENTER_TO_RALLY
+[2014-02-07 17:13:13 Z]  INFO : QCConnection.find_new - find_new query: BG_USER_01 ="" and BG_USER_02 ="Y"
+[2014-02-07 17:13:13 Z]  INFO : QCConnection.find_new -   Found 0 New bugs in QC
+[2014-02-07 17:13:13 Z]  INFO : ConnectorRunner.process_service - Finished Service COPY_QUALITY CENTER_TO_RALLY
+[2014-02-07 17:13:13 Z]  INFO : QCConnection.disconnect - Disconnected from Quality Center
+[2014-02-07 17:13:13 Z]  INFO : ConnectorRunner.run_services - time file written with value of 2014-02-07 17:13:11 UTC
+[2014-02-07 17:13:13 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 1 items updated from Rally to Quality center 
+[2014-02-07 17:13:13 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 1 items updated from Quality center to Rally 
+[2014-02-07 17:13:13 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 0 items copied from Quality center to Rally 
+[2014-02-07 17:13:13 Z]  INFO : ConnectorRunner.log_service_statistics - qc_config_defects.xml: service run took 14 seconds
+
+************************************************************************************************************
+
+     rally2_qc_connector
+         pid: 3168   
+         starting at: 2014-02-18 14:01:24 Z
+         cwd: C:/Program Files/RallyConnectorforQualityCenter_DEFECTS
+         configs: qc_config_defects.xml
+         interval: -1
+
+************************************************************************************************************
+
+[2014-02-18 14:01:24 Z]   ANY : ConnectorRunner.block in run - processing to commence using content from qc_config_defects.xml
+[2014-02-18 14:01:24 Z]  INFO : Class.read_config_file - qc_config_defects.xml last modified 2014-02-18 13:59:26 UTC, size: 4359 chars
+[2014-02-18 14:01:24 Z]  INFO : RallyConnection.initialize - Initializing Rally connection version 2.7.9
+[2014-02-18 14:01:24 Z]  INFO : RallyConnection.initialize - Rally Web Services version 1.16
+[2014-02-18 14:01:24 Z]  INFO : QCConnection.initialize - Initializing Quality Center connection version 2.7.9
+[2014-02-18 14:01:24 Z]  INFO : Connector.initialize - Ruby platform i386-mingw32
+[2014-02-18 14:01:24 Z]  INFO : Connector.initialize - Ruby version 1.9.2
+[2014-02-18 14:01:24 Z]  INFO : QCConnection.connect - Connecting to Quality Center
+[2014-02-18 14:01:25 Z]  INFO : QCConnection.connect - Connected to Quality Center at http://vmwin2008qc11:8080/qcbin/wcomsrv.dll (version 11.0.0.8258)
+[2014-02-18 14:01:26 Z]  INFO : QCConnection.connect -   Domain: DEMO
+[2014-02-18 14:01:26 Z]  INFO : QCConnection.connect -   Project: DEMO1
+[2014-02-18 14:01:26 Z]  INFO : RallyConnection.connect - Connecting to Rally
+[2014-02-18 14:01:33 Z]  INFO : RallyConnection.connect - Connected to Rally at https://demo02.rallydev.com/slm -  Workspace: RQM Demo
+[2014-02-18 14:01:33 Z]  INFO : RallyConnection.connect -   Projects: Shopping Team
+[2014-02-18 14:01:33 Z]  INFO : Connector.validate - Beginning validation
+[2014-02-18 14:01:36 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://demo02.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-01-25.</OperationResultWarning>
+  </Warnings>
+[2014-02-18 14:01:38 Z] ERROR : RallyConnection.validate - <ExternalIDField> QCDefectID not found
+[2014-02-18 14:01:38 Z] ERROR : ConnectorRunner.rescue in run_services - Unexpected exception occurred
+[2014-02-18 14:01:38 Z] ERROR : ConnectorRunner.exception - Message Invalid Configuration
+[2014-02-18 14:01:38 Z] ERROR : ConnectorRunner.exception - Stack Trace
+[2014-02-18 14:01:38 Z] ERROR : ConnectorRunner.block in exception - C:/DOCUME~1/demouser/LOCALS~1/Temp/ocrFC6.tmp/lib/ruby/gems/1.9.1/gems/yeti-2.7.9/lib/yeti/connector_runner.rb:269:in `run_services'
+[2014-02-18 14:01:38 Z] ERROR : ConnectorRunner.block in exception - C:/DOCUME~1/demouser/LOCALS~1/Temp/ocrFC6.tmp/lib/ruby/gems/1.9.1/gems/yeti-2.7.9/lib/yeti/connector_runner.rb:162:in `block in run'
+[2014-02-18 14:01:38 Z] ERROR : ConnectorRunner.block in exception - C:/DOCUME~1/demouser/LOCALS~1/Temp/ocrFC6.tmp/lib/ruby/gems/1.9.1/gems/yeti-2.7.9/lib/yeti/connector_runner.rb:138:in `each'
+[2014-02-18 14:01:38 Z] ERROR : ConnectorRunner.block in exception - C:/DOCUME~1/demouser/LOCALS~1/Temp/ocrFC6.tmp/lib/ruby/gems/1.9.1/gems/yeti-2.7.9/lib/yeti/connector_runner.rb:138:in `run'
+[2014-02-18 14:01:38 Z] ERROR : ConnectorRunner.block in exception - C:/DOCUME~1/demouser/LOCALS~1/Temp/ocrFC6.tmp/src/rally2_qc_connector.rb:55:in `<main>'
+[2014-02-18 14:01:38 Z]  INFO : QCConnection.disconnect - Disconnected from Quality Center
+[2014-02-18 14:01:38 Z]  INFO : ConnectorRunner.run_services - There was an error in processing so the Time File was not written
+[2014-02-18 14:01:38 Z]  INFO : ConnectorRunner.log_service_statistics - qc_config_defects.xml: service run took 14 seconds
+
+************************************************************************************************************
+
+     rally2_qc_connector
+         pid: 3160   
+         starting at: 2014-02-18 14:05:15 Z
+         cwd: C:/Program Files/RallyConnectorforQualityCenter_DEFECTS
+         configs: qc_config_defects.xml
+         interval: -1
+
+************************************************************************************************************
+
+[2014-02-18 14:05:15 Z]   ANY : ConnectorRunner.block in run - processing to commence using content from qc_config_defects.xml
+[2014-02-18 14:05:15 Z]  INFO : Class.read_config_file - qc_config_defects.xml last modified 2014-02-18 13:59:26 UTC, size: 4359 chars
+[2014-02-18 14:05:15 Z]  INFO : RallyConnection.initialize - Initializing Rally connection version 2.7.9
+[2014-02-18 14:05:15 Z]  INFO : RallyConnection.initialize - Rally Web Services version 1.16
+[2014-02-18 14:05:15 Z]  INFO : QCConnection.initialize - Initializing Quality Center connection version 2.7.9
+[2014-02-18 14:05:15 Z]  INFO : Connector.initialize - Ruby platform i386-mingw32
+[2014-02-18 14:05:15 Z]  INFO : Connector.initialize - Ruby version 1.9.2
+[2014-02-18 14:05:15 Z]  INFO : QCConnection.connect - Connecting to Quality Center
+[2014-02-18 14:05:15 Z]  INFO : QCConnection.connect - Connected to Quality Center at http://vmwin2008qc11:8080/qcbin/wcomsrv.dll (version 11.0.0.8258)
+[2014-02-18 14:05:16 Z]  INFO : QCConnection.connect -   Domain: DEMO
+[2014-02-18 14:05:16 Z]  INFO : QCConnection.connect -   Project: DEMO1
+[2014-02-18 14:05:16 Z]  INFO : RallyConnection.connect - Connecting to Rally
+[2014-02-18 14:05:22 Z]  INFO : RallyConnection.connect - Connected to Rally at https://demo02.rallydev.com/slm -  Workspace: RQM Demo
+[2014-02-18 14:05:22 Z]  INFO : RallyConnection.connect -   Projects: Shopping Team
+[2014-02-18 14:05:22 Z]  INFO : Connector.validate - Beginning validation
+[2014-02-18 14:05:25 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://demo02.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-01-25.</OperationResultWarning>
+  </Warnings>
+[2014-02-18 14:05:27 Z]  INFO : Connector.validate - Validation complete
+[2014-02-18 14:05:27 Z]  INFO : ConnectorRunner.run_services - Last Run 2014-02-07 17:13:11 UTC  --- Now 2014-02-18 14:05:27 UTC
+[2014-02-18 14:05:27 Z]  INFO : ConnectorRunner.process_service - Starting Service UPDATE_RALLY_TO_QUALITY CENTER
+[2014-02-18 14:05:27 Z]  INFO : RallyConnection.find_updates - Find Rally defects updated after 2014-02-07 17:13:06 UTC (last run time - epsilon seconds)
+[2014-02-18 14:05:27 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://demo02.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-01-25.</OperationResultWarning>
+  </Warnings>
+[2014-02-18 14:05:27 Z]  INFO : RallyConnection.find_updates -   Found 0 updated defects in Rally
+[2014-02-18 14:05:27 Z]  INFO : ConnectorRunner.process_service - Finished Service UPDATE_RALLY_TO_QUALITY CENTER
+[2014-02-18 14:05:27 Z]  INFO : ConnectorRunner.process_service - Starting Service UPDATE_QUALITY CENTER_TO_RALLY
+[2014-02-18 14:05:27 Z]  INFO : QCConnection.find_updates - Looking for updates made after QC server time of: '2014-02-07 10:12:36'
+[2014-02-18 14:05:27 Z]  INFO : QCConnection.find_updates -   Found 1 Updated bugs in QC
+[2014-02-18 14:05:28 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://demo02.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-01-25.</OperationResultWarning>
+  </Warnings>
+[2014-02-18 14:05:28 Z]  WARN : RallyConnection.initialize - Could not find Rally defect with ObjectID 4825413
+[2014-02-18 14:05:28 Z]  WARN : ConnectorRunner.exception - Message Could not find Rally defect with ObjectID 4825413
+[2014-02-18 14:05:28 Z]  INFO : ConnectorRunner.process_service - Finished Service UPDATE_QUALITY CENTER_TO_RALLY
+[2014-02-18 14:05:28 Z]  INFO : ConnectorRunner.process_service - Starting Service COPY_QUALITY CENTER_TO_RALLY
+[2014-02-18 14:05:28 Z]  INFO : QCConnection.find_new - find_new query: BG_USER_01 ="" and BG_USER_02 ="Y"
+[2014-02-18 14:05:28 Z]  INFO : QCConnection.find_new -   Found 1 New bugs in QC
+[2014-02-18 14:05:28 Z]  INFO : Connector.copy_to_rally - Copy to Rally
+[2014-02-18 14:05:28 Z]  WARN : OtherEnumFieldHandler.transform_out - For BG_PRIORITY field could not transform_out()
+[2014-02-18 14:05:29 Z]  INFO : RallyConnection.create_internal -   Created DE31
+[2014-02-18 14:05:29 Z]  INFO : Connector.copy_to_rally - Quality Center bug 125 copied to Rally defect DE31
+[2014-02-18 14:05:29 Z]  INFO : ConnectorRunner.process_service - Finished Service COPY_QUALITY CENTER_TO_RALLY
+[2014-02-18 14:05:30 Z]  INFO : QCConnection.disconnect - Disconnected from Quality Center
+[2014-02-18 14:05:30 Z]  INFO : ConnectorRunner.run_services - time file written with value of 2014-02-18 14:05:27 UTC
+[2014-02-18 14:05:30 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 0 items updated from Rally to Quality center 
+[2014-02-18 14:05:30 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 0 items updated from Quality center to Rally 
+[2014-02-18 14:05:30 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 1 items copied from Quality center to Rally 
+[2014-02-18 14:05:30 Z]  INFO : ConnectorRunner.log_service_statistics - qc_config_defects.xml: service run took 15 seconds
+
+************************************************************************************************************
+
+     rally2_qc_connector
+         pid: 3064   
+         starting at: 2014-03-03 19:05:16 Z
+         cwd: C:/Program Files/RallyConnectorforQualityCenter_DEFECTS
+         configs: qc_config_defects.xml
+         interval: -1
+
+************************************************************************************************************
+
+[2014-03-03 19:05:16 Z]   ANY : ConnectorRunner.block in run - processing to commence using content from qc_config_defects.xml
+[2014-03-03 19:05:16 Z]  INFO : Class.read_config_file - qc_config_defects.xml last modified 2014-03-03 19:04:40 UTC, size: 4363 chars
+[2014-03-03 19:05:16 Z]  INFO : RallyConnection.initialize - Initializing Rally connection version 2.7.9
+[2014-03-03 19:05:16 Z]  INFO : RallyConnection.initialize - Rally Web Services version 1.16
+[2014-03-03 19:05:16 Z]  INFO : QCConnection.initialize - Initializing Quality Center connection version 2.7.9
+[2014-03-03 19:05:16 Z]  INFO : Connector.initialize - Ruby platform i386-mingw32
+[2014-03-03 19:05:16 Z]  INFO : Connector.initialize - Ruby version 1.9.2
+[2014-03-03 19:05:16 Z]  INFO : QCConnection.connect - Connecting to Quality Center
+[2014-03-03 19:05:17 Z]  INFO : QCConnection.connect - Connected to Quality Center at http://vmwin2008qc11:8080/qcbin/wcomsrv.dll (version 11.0.0.8258)
+[2014-03-03 19:05:19 Z]  INFO : QCConnection.connect -   Domain: DEMO
+[2014-03-03 19:05:19 Z]  INFO : QCConnection.connect -   Project: DEMO1
+[2014-03-03 19:05:19 Z]  INFO : RallyConnection.connect - Connecting to Rally
+[2014-03-03 19:05:23 Z] ERROR : RallyConnection.initialize - Couldn't find an open Rally workspace named 'Integrations'
+[2014-03-03 19:05:23 Z] ERROR : RallyConnection.rescue in connect - Could not connect to Rally at https://audemo.rallydev.com/slm as user sara@acme.com
+[2014-03-03 19:05:23 Z] ERROR : RallyConnection.initialize - Couldn't find an open Rally workspace named 'Integrations'
+[2014-03-03 19:05:23 Z] ERROR : ConnectorRunner.exception - Message Couldn't find an open Rally workspace named 'Integrations'
+[2014-03-03 19:05:23 Z] ERROR : ConnectorRunner.exception - Stack Trace
+[2014-03-03 19:05:23 Z] ERROR : ConnectorRunner.block in exception - C:/DOCUME~1/demouser/LOCALS~1/Temp/ocr58.tmp/lib/ruby/gems/1.9.1/gems/yeti-2.7.9/lib/yeti/rally_connection.rb:499:in `find_workspace'
+[2014-03-03 19:05:23 Z] ERROR : ConnectorRunner.block in exception - C:/DOCUME~1/demouser/LOCALS~1/Temp/ocr58.tmp/lib/ruby/gems/1.9.1/gems/yeti-2.7.9/lib/yeti/rally_connection.rb:112:in `connect'
+[2014-03-03 19:05:23 Z] ERROR : ConnectorRunner.block in exception - C:/DOCUME~1/demouser/LOCALS~1/Temp/ocr58.tmp/lib/ruby/gems/1.9.1/gems/yeti-2.7.9/lib/yeti/connector_runner.rb:265:in `run_services'
+[2014-03-03 19:05:23 Z] ERROR : ConnectorRunner.block in exception - C:/DOCUME~1/demouser/LOCALS~1/Temp/ocr58.tmp/lib/ruby/gems/1.9.1/gems/yeti-2.7.9/lib/yeti/connector_runner.rb:162:in `block in run'
+[2014-03-03 19:05:23 Z] ERROR : ConnectorRunner.block in exception - C:/DOCUME~1/demouser/LOCALS~1/Temp/ocr58.tmp/lib/ruby/gems/1.9.1/gems/yeti-2.7.9/lib/yeti/connector_runner.rb:138:in `each'
+[2014-03-03 19:05:23 Z] ERROR : ConnectorRunner.block in exception - C:/DOCUME~1/demouser/LOCALS~1/Temp/ocr58.tmp/lib/ruby/gems/1.9.1/gems/yeti-2.7.9/lib/yeti/connector_runner.rb:138:in `run'
+[2014-03-03 19:05:23 Z] ERROR : ConnectorRunner.block in exception - C:/DOCUME~1/demouser/LOCALS~1/Temp/ocr58.tmp/src/rally2_qc_connector.rb:55:in `<main>'
+[2014-03-03 19:05:23 Z]  INFO : QCConnection.disconnect - Disconnected from Quality Center
+[2014-03-03 19:05:23 Z]  INFO : ConnectorRunner.run_services - There was an error in processing so the Time File was not written
+[2014-03-03 19:05:23 Z]  INFO : ConnectorRunner.log_service_statistics - qc_config_defects.xml: service run took 7 seconds
+
+************************************************************************************************************
+
+     rally2_qc_connector
+         pid: 2188   
+         starting at: 2014-03-03 19:06:10 Z
+         cwd: C:/Program Files/RallyConnectorforQualityCenter_DEFECTS
+         configs: qc_config_defects.xml
+         interval: -1
+
+************************************************************************************************************
+
+[2014-03-03 19:06:10 Z]   ANY : ConnectorRunner.block in run - processing to commence using content from qc_config_defects.xml
+[2014-03-03 19:06:10 Z]  INFO : Class.read_config_file - qc_config_defects.xml last modified 2014-03-03 19:05:46 UTC, size: 4366 chars
+[2014-03-03 19:06:10 Z]  INFO : RallyConnection.initialize - Initializing Rally connection version 2.7.9
+[2014-03-03 19:06:10 Z]  INFO : RallyConnection.initialize - Rally Web Services version 1.16
+[2014-03-03 19:06:10 Z]  INFO : QCConnection.initialize - Initializing Quality Center connection version 2.7.9
+[2014-03-03 19:06:10 Z]  INFO : Connector.initialize - Ruby platform i386-mingw32
+[2014-03-03 19:06:10 Z]  INFO : Connector.initialize - Ruby version 1.9.2
+[2014-03-03 19:06:10 Z]  INFO : QCConnection.connect - Connecting to Quality Center
+[2014-03-03 19:06:10 Z]  INFO : QCConnection.connect - Connected to Quality Center at http://vmwin2008qc11:8080/qcbin/wcomsrv.dll (version 11.0.0.8258)
+[2014-03-03 19:06:11 Z]  INFO : QCConnection.connect -   Domain: DEMO
+[2014-03-03 19:06:11 Z]  INFO : QCConnection.connect -   Project: DEMO1
+[2014-03-03 19:06:11 Z]  INFO : RallyConnection.connect - Connecting to Rally
+[2014-03-03 19:06:18 Z]  INFO : RallyConnection.connect - Connected to Rally at https://audemo.rallydev.com/slm -  Workspace: Integrations CW
+[2014-03-03 19:06:18 Z]  INFO : RallyConnection.connect -   Projects: Shopping Team
+[2014-03-03 19:06:18 Z]  INFO : Connector.validate - Beginning validation
+[2014-03-03 19:06:21 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://audemo.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-02-08.</OperationResultWarning>
+  </Warnings>
+[2014-03-03 19:06:23 Z]  INFO : Connector.validate - Validation complete
+[2014-03-03 19:06:23 Z]  INFO : ConnectorRunner.run_services - Last Run 2014-02-18 14:05:27 UTC  --- Now 2014-03-03 19:06:23 UTC
+[2014-03-03 19:06:23 Z]  INFO : ConnectorRunner.process_service - Starting Service UPDATE_RALLY_TO_QUALITY CENTER
+[2014-03-03 19:06:23 Z]  INFO : RallyConnection.find_updates - Find Rally defects updated after 2014-02-18 14:05:22 UTC (last run time - epsilon seconds)
+[2014-03-03 19:06:24 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://audemo.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-02-08.</OperationResultWarning>
+  </Warnings>
+[2014-03-03 19:06:24 Z]  INFO : RallyConnection.find_updates -   Found 0 updated defects in Rally
+[2014-03-03 19:06:24 Z]  INFO : ConnectorRunner.process_service - Finished Service UPDATE_RALLY_TO_QUALITY CENTER
+[2014-03-03 19:06:24 Z]  INFO : ConnectorRunner.process_service - Starting Service UPDATE_QUALITY CENTER_TO_RALLY
+[2014-03-03 19:06:24 Z]  INFO : QCConnection.find_updates - Looking for updates made after QC server time of: '2014-02-18 07:05:19'
+[2014-03-03 19:06:24 Z]  INFO : QCConnection.find_updates -   Found 0 Updated bugs in QC
+[2014-03-03 19:06:24 Z]  INFO : ConnectorRunner.process_service - Finished Service UPDATE_QUALITY CENTER_TO_RALLY
+[2014-03-03 19:06:24 Z]  INFO : ConnectorRunner.process_service - Starting Service COPY_QUALITY CENTER_TO_RALLY
+[2014-03-03 19:06:24 Z]  INFO : QCConnection.find_new - find_new query: BG_USER_01 ="" and BG_USER_02 ="Y"
+[2014-03-03 19:06:24 Z]  INFO : QCConnection.find_new -   Found 0 New bugs in QC
+[2014-03-03 19:06:24 Z]  INFO : ConnectorRunner.process_service - Finished Service COPY_QUALITY CENTER_TO_RALLY
+[2014-03-03 19:06:24 Z]  INFO : QCConnection.disconnect - Disconnected from Quality Center
+[2014-03-03 19:06:24 Z]  INFO : ConnectorRunner.run_services - time file written with value of 2014-03-03 19:06:23 UTC
+[2014-03-03 19:06:24 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 0 items updated from Rally to Quality center 
+[2014-03-03 19:06:24 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 0 items updated from Quality center to Rally 
+[2014-03-03 19:06:24 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 0 items copied from Quality center to Rally 
+[2014-03-03 19:06:24 Z]  INFO : ConnectorRunner.log_service_statistics - qc_config_defects.xml: service run took 14 seconds
+
+************************************************************************************************************
+
+     rally2_qc_connector
+         pid: 3808   
+         starting at: 2014-03-03 19:13:46 Z
+         cwd: C:/Program Files/RallyConnectorforQualityCenter_DEFECTS
+         configs: qc_config_defects.xml
+         interval: -1
+
+************************************************************************************************************
+
+[2014-03-03 19:13:47 Z]   ANY : ConnectorRunner.block in run - processing to commence using content from qc_config_defects.xml
+[2014-03-03 19:13:47 Z]  INFO : Class.read_config_file - qc_config_defects.xml last modified 2014-03-03 19:05:46 UTC, size: 4366 chars
+[2014-03-03 19:13:47 Z]  INFO : RallyConnection.initialize - Initializing Rally connection version 2.7.9
+[2014-03-03 19:13:47 Z]  INFO : RallyConnection.initialize - Rally Web Services version 1.16
+[2014-03-03 19:13:47 Z]  INFO : QCConnection.initialize - Initializing Quality Center connection version 2.7.9
+[2014-03-03 19:13:47 Z]  INFO : Connector.initialize - Ruby platform i386-mingw32
+[2014-03-03 19:13:47 Z]  INFO : Connector.initialize - Ruby version 1.9.2
+[2014-03-03 19:13:47 Z]  INFO : QCConnection.connect - Connecting to Quality Center
+[2014-03-03 19:13:47 Z]  INFO : QCConnection.connect - Connected to Quality Center at http://vmwin2008qc11:8080/qcbin/wcomsrv.dll (version 11.0.0.8258)
+[2014-03-03 19:13:48 Z]  INFO : QCConnection.connect -   Domain: DEMO
+[2014-03-03 19:13:48 Z]  INFO : QCConnection.connect -   Project: DEMO1
+[2014-03-03 19:13:48 Z]  INFO : RallyConnection.connect - Connecting to Rally
+[2014-03-03 19:13:55 Z]  INFO : RallyConnection.connect - Connected to Rally at https://audemo.rallydev.com/slm -  Workspace: Integrations CW
+[2014-03-03 19:13:55 Z]  INFO : RallyConnection.connect -   Projects: Shopping Team
+[2014-03-03 19:13:55 Z]  INFO : Connector.validate - Beginning validation
+[2014-03-03 19:13:59 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://audemo.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-02-08.</OperationResultWarning>
+  </Warnings>
+[2014-03-03 19:14:01 Z]  INFO : Connector.validate - Validation complete
+[2014-03-03 19:14:01 Z]  INFO : ConnectorRunner.run_services - Last Run 2014-03-03 19:06:23 UTC  --- Now 2014-03-03 19:14:01 UTC
+[2014-03-03 19:14:01 Z]  INFO : ConnectorRunner.process_service - Starting Service UPDATE_RALLY_TO_QUALITY CENTER
+[2014-03-03 19:14:01 Z]  INFO : RallyConnection.find_updates - Find Rally defects updated after 2014-03-03 19:06:18 UTC (last run time - epsilon seconds)
+[2014-03-03 19:14:01 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://audemo.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-02-08.</OperationResultWarning>
+  </Warnings>
+[2014-03-03 19:14:01 Z]  INFO : RallyConnection.find_updates -   Found 0 updated defects in Rally
+[2014-03-03 19:14:01 Z]  INFO : ConnectorRunner.process_service - Finished Service UPDATE_RALLY_TO_QUALITY CENTER
+[2014-03-03 19:14:01 Z]  INFO : ConnectorRunner.process_service - Starting Service UPDATE_QUALITY CENTER_TO_RALLY
+[2014-03-03 19:14:01 Z]  INFO : QCConnection.find_updates - Looking for updates made after QC server time of: '2014-03-03 12:06:15'
+[2014-03-03 19:14:01 Z]  INFO : QCConnection.find_updates -   Found 0 Updated bugs in QC
+[2014-03-03 19:14:01 Z]  INFO : ConnectorRunner.process_service - Finished Service UPDATE_QUALITY CENTER_TO_RALLY
+[2014-03-03 19:14:01 Z]  INFO : ConnectorRunner.process_service - Starting Service COPY_QUALITY CENTER_TO_RALLY
+[2014-03-03 19:14:01 Z]  INFO : QCConnection.find_new - find_new query: BG_USER_01 ="" and BG_USER_02 ="Y"
+[2014-03-03 19:14:01 Z]  INFO : QCConnection.find_new -   Found 0 New bugs in QC
+[2014-03-03 19:14:01 Z]  INFO : ConnectorRunner.process_service - Finished Service COPY_QUALITY CENTER_TO_RALLY
+[2014-03-03 19:14:01 Z]  INFO : QCConnection.disconnect - Disconnected from Quality Center
+[2014-03-03 19:14:01 Z]  INFO : ConnectorRunner.run_services - time file written with value of 2014-03-03 19:14:01 UTC
+[2014-03-03 19:14:01 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 0 items updated from Rally to Quality center 
+[2014-03-03 19:14:01 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 0 items updated from Quality center to Rally 
+[2014-03-03 19:14:01 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 0 items copied from Quality center to Rally 
+[2014-03-03 19:14:01 Z]  INFO : ConnectorRunner.log_service_statistics - qc_config_defects.xml: service run took 15 seconds
+
+************************************************************************************************************
+
+     rally2_qc_connector
+         pid: 3932   
+         starting at: 2014-03-03 19:28:52 Z
+         cwd: C:/Program Files/RallyConnectorforQualityCenter_DEFECTS
+         configs: qc_config_defects.xml
+         interval: -1
+
+************************************************************************************************************
+
+[2014-03-03 19:28:52 Z]   ANY : ConnectorRunner.block in run - processing to commence using content from qc_config_defects.xml
+[2014-03-03 19:28:52 Z]  INFO : Class.read_config_file - qc_config_defects.xml last modified 2014-03-03 19:05:46 UTC, size: 4366 chars
+[2014-03-03 19:28:52 Z]  INFO : RallyConnection.initialize - Initializing Rally connection version 2.7.9
+[2014-03-03 19:28:52 Z]  INFO : RallyConnection.initialize - Rally Web Services version 1.16
+[2014-03-03 19:28:52 Z]  INFO : QCConnection.initialize - Initializing Quality Center connection version 2.7.9
+[2014-03-03 19:28:52 Z]  INFO : Connector.initialize - Ruby platform i386-mingw32
+[2014-03-03 19:28:52 Z]  INFO : Connector.initialize - Ruby version 1.9.2
+[2014-03-03 19:28:52 Z]  INFO : QCConnection.connect - Connecting to Quality Center
+[2014-03-03 19:28:53 Z]  INFO : QCConnection.connect - Connected to Quality Center at http://vmwin2008qc11:8080/qcbin/wcomsrv.dll (version 11.0.0.8258)
+[2014-03-03 19:28:53 Z]  INFO : QCConnection.connect -   Domain: DEMO
+[2014-03-03 19:28:53 Z]  INFO : QCConnection.connect -   Project: DEMO1
+[2014-03-03 19:28:53 Z]  INFO : RallyConnection.connect - Connecting to Rally
+[2014-03-03 19:29:00 Z]  INFO : RallyConnection.connect - Connected to Rally at https://audemo.rallydev.com/slm -  Workspace: Integrations CW
+[2014-03-03 19:29:00 Z]  INFO : RallyConnection.connect -   Projects: Shopping Team
+[2014-03-03 19:29:00 Z]  INFO : Connector.validate - Beginning validation
+[2014-03-03 19:29:04 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://audemo.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-02-08.</OperationResultWarning>
+  </Warnings>
+[2014-03-03 19:29:06 Z]  INFO : Connector.validate - Validation complete
+[2014-03-03 19:29:06 Z]  INFO : ConnectorRunner.run_services - Last Run 2014-03-03 19:14:01 UTC  --- Now 2014-03-03 19:29:06 UTC
+[2014-03-03 19:29:06 Z]  INFO : ConnectorRunner.process_service - Starting Service UPDATE_RALLY_TO_QUALITY CENTER
+[2014-03-03 19:29:06 Z]  INFO : RallyConnection.find_updates - Find Rally defects updated after 2014-03-03 19:13:56 UTC (last run time - epsilon seconds)
+[2014-03-03 19:29:06 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://audemo.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-02-08.</OperationResultWarning>
+  </Warnings>
+[2014-03-03 19:29:06 Z]  INFO : RallyConnection.find_updates -   Found 0 updated defects in Rally
+[2014-03-03 19:29:06 Z]  INFO : ConnectorRunner.process_service - Finished Service UPDATE_RALLY_TO_QUALITY CENTER
+[2014-03-03 19:29:06 Z]  INFO : ConnectorRunner.process_service - Starting Service UPDATE_QUALITY CENTER_TO_RALLY
+[2014-03-03 19:29:06 Z]  INFO : QCConnection.find_updates - Looking for updates made after QC server time of: '2014-03-03 12:13:53'
+[2014-03-03 19:29:06 Z]  INFO : QCConnection.find_updates -   Found 0 Updated bugs in QC
+[2014-03-03 19:29:06 Z]  INFO : ConnectorRunner.process_service - Finished Service UPDATE_QUALITY CENTER_TO_RALLY
+[2014-03-03 19:29:06 Z]  INFO : ConnectorRunner.process_service - Starting Service COPY_QUALITY CENTER_TO_RALLY
+[2014-03-03 19:29:06 Z]  INFO : QCConnection.find_new - find_new query: BG_USER_01 ="" and BG_USER_02 ="Y"
+[2014-03-03 19:29:06 Z]  INFO : QCConnection.find_new -   Found 1 New bugs in QC
+[2014-03-03 19:29:06 Z]  INFO : Connector.copy_to_rally - Copy to Rally
+[2014-03-03 19:29:06 Z]  WARN : OtherEnumFieldHandler.transform_out - For BG_PRIORITY field could not transform_out()
+[2014-03-03 19:29:07 Z]  INFO : RallyConnection.create_internal -   Created DE18
+[2014-03-03 19:29:07 Z]  INFO : Connector.copy_to_rally - Quality Center bug 126 copied to Rally defect DE18
+[2014-03-03 19:29:07 Z]  INFO : ConnectorRunner.process_service - Finished Service COPY_QUALITY CENTER_TO_RALLY
+[2014-03-03 19:29:08 Z]  INFO : QCConnection.disconnect - Disconnected from Quality Center
+[2014-03-03 19:29:08 Z]  INFO : ConnectorRunner.run_services - time file written with value of 2014-03-03 19:29:06 UTC
+[2014-03-03 19:29:08 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 0 items updated from Rally to Quality center 
+[2014-03-03 19:29:08 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 0 items updated from Quality center to Rally 
+[2014-03-03 19:29:08 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 1 items copied from Quality center to Rally 
+[2014-03-03 19:29:08 Z]  INFO : ConnectorRunner.log_service_statistics - qc_config_defects.xml: service run took 16 seconds
+
+************************************************************************************************************
+
+     rally2_qc_connector
+         pid: 3980   
+         starting at: 2014-03-03 23:12:15 Z
+         cwd: C:/Program Files/RallyConnectorforQualityCenter_DEFECTS
+         configs: qc_config_defects.xml
+         interval: -1
+
+************************************************************************************************************
+
+[2014-03-03 23:12:15 Z]   ANY : ConnectorRunner.block in run - processing to commence using content from qc_config_defects.xml
+[2014-03-03 23:12:15 Z]  INFO : Class.read_config_file - qc_config_defects.xml last modified 2014-03-03 19:05:46 UTC, size: 4366 chars
+[2014-03-03 23:12:15 Z]  INFO : RallyConnection.initialize - Initializing Rally connection version 2.7.9
+[2014-03-03 23:12:15 Z]  INFO : RallyConnection.initialize - Rally Web Services version 1.16
+[2014-03-03 23:12:15 Z]  INFO : QCConnection.initialize - Initializing Quality Center connection version 2.7.9
+[2014-03-03 23:12:15 Z]  INFO : Connector.initialize - Ruby platform i386-mingw32
+[2014-03-03 23:12:15 Z]  INFO : Connector.initialize - Ruby version 1.9.2
+[2014-03-03 23:12:15 Z]  INFO : QCConnection.connect - Connecting to Quality Center
+[2014-03-03 23:12:17 Z]  INFO : QCConnection.connect - Connected to Quality Center at http://vmwin2008qc11:8080/qcbin/wcomsrv.dll (version 11.0.0.8258)
+[2014-03-03 23:12:19 Z]  INFO : QCConnection.connect -   Domain: DEMO
+[2014-03-03 23:12:19 Z]  INFO : QCConnection.connect -   Project: DEMO1
+[2014-03-03 23:12:19 Z]  INFO : RallyConnection.connect - Connecting to Rally
+[2014-03-03 23:12:26 Z]  INFO : RallyConnection.connect - Connected to Rally at https://audemo.rallydev.com/slm -  Workspace: Integrations CW
+[2014-03-03 23:12:26 Z]  INFO : RallyConnection.connect -   Projects: Shopping Team
+[2014-03-03 23:12:26 Z]  INFO : Connector.validate - Beginning validation
+[2014-03-03 23:12:29 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://audemo.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-02-08.</OperationResultWarning>
+  </Warnings>
+[2014-03-03 23:12:31 Z]  INFO : Connector.validate - Validation complete
+[2014-03-03 23:12:31 Z]  INFO : ConnectorRunner.run_services - Last Run 2014-03-03 19:29:06 UTC  --- Now 2014-03-03 23:12:31 UTC
+[2014-03-03 23:12:31 Z]  INFO : ConnectorRunner.process_service - Starting Service UPDATE_RALLY_TO_QUALITY CENTER
+[2014-03-03 23:12:31 Z]  INFO : RallyConnection.find_updates - Find Rally defects updated after 2014-03-03 19:29:01 UTC (last run time - epsilon seconds)
+[2014-03-03 23:12:31 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://audemo.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-02-08.</OperationResultWarning>
+  </Warnings>
+[2014-03-03 23:12:32 Z]  INFO : RallyConnection.find_updates -   Found 1 updated defects in Rally
+[2014-03-03 23:12:32 Z]  WARN : OtherEnumFieldHandler.transform_in - For BG_PRIORITY field could not transform_in(None)
+[2014-03-03 23:12:32 Z]  INFO : QCConnection.update_internal -   Updated bug 126 in QC
+[2014-03-03 23:12:32 Z]  INFO : Connector.update_other - Quality Center bug 126 updated from Rally defect DE18
+[2014-03-03 23:12:32 Z]  INFO : ConnectorRunner.process_service - Finished Service UPDATE_RALLY_TO_QUALITY CENTER
+[2014-03-03 23:12:32 Z]  INFO : ConnectorRunner.process_service - Starting Service UPDATE_QUALITY CENTER_TO_RALLY
+[2014-03-03 23:12:32 Z]  INFO : QCConnection.find_updates - Looking for updates made after QC server time of: '2014-03-03 12:28:59'
+[2014-03-03 23:12:32 Z]  INFO : QCConnection.find_updates -   Found 1 Updated bugs in QC
+[2014-03-03 23:12:32 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://audemo.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-02-08.</OperationResultWarning>
+  </Warnings>
+[2014-03-03 23:12:32 Z]  WARN : OtherEnumFieldHandler.transform_out - For BG_PRIORITY field could not transform_out()
+[2014-03-03 23:12:32 Z]  INFO : RallyConnection.update_internal -   Updating DE18
+[2014-03-03 23:12:33 Z]  INFO : Connector.update_rally - Rally defect DE18 updated from Quality Center bug 126
+[2014-03-03 23:12:33 Z]  INFO : ConnectorRunner.process_service - Finished Service UPDATE_QUALITY CENTER_TO_RALLY
+[2014-03-03 23:12:33 Z]  INFO : ConnectorRunner.process_service - Starting Service COPY_QUALITY CENTER_TO_RALLY
+[2014-03-03 23:12:33 Z]  INFO : QCConnection.find_new - find_new query: BG_USER_01 ="" and BG_USER_02 ="Y"
+[2014-03-03 23:12:33 Z]  INFO : QCConnection.find_new -   Found 0 New bugs in QC
+[2014-03-03 23:12:33 Z]  INFO : ConnectorRunner.process_service - Finished Service COPY_QUALITY CENTER_TO_RALLY
+[2014-03-03 23:12:34 Z]  INFO : QCConnection.disconnect - Disconnected from Quality Center
+[2014-03-03 23:12:34 Z]  INFO : ConnectorRunner.run_services - time file written with value of 2014-03-03 23:12:31 UTC
+[2014-03-03 23:12:34 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 1 items updated from Rally to Quality center 
+[2014-03-03 23:12:34 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 1 items updated from Quality center to Rally 
+[2014-03-03 23:12:34 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 0 items copied from Quality center to Rally 
+[2014-03-03 23:12:34 Z]  INFO : ConnectorRunner.log_service_statistics - qc_config_defects.xml: service run took 19 seconds
+
+************************************************************************************************************
+
+     rally2_qc_connector
+         pid: 2856   
+         starting at: 2014-04-03 13:23:10 Z
+         cwd: C:/Program Files/RallyConnectorforQualityCenter_DEFECTS
+         configs: qc_config_defects.xml
+         interval: -1
+
+************************************************************************************************************
+
+[2014-04-03 13:23:10 Z]   ANY : ConnectorRunner.block in run - processing to commence using content from qc_config_defects.xml
+[2014-04-03 13:23:10 Z]  INFO : Class.read_config_file - qc_config_defects.xml last modified 2014-03-05 15:13:25 UTC, size: 4363 chars
+[2014-04-03 13:23:10 Z]  INFO : RallyConnection.initialize - Initializing Rally connection version 2.7.9
+[2014-04-03 13:23:10 Z]  INFO : RallyConnection.initialize - Rally Web Services version 1.16
+[2014-04-03 13:23:10 Z]  INFO : QCConnection.initialize - Initializing Quality Center connection version 2.7.9
+[2014-04-03 13:23:10 Z]  INFO : Connector.initialize - Ruby platform i386-mingw32
+[2014-04-03 13:23:10 Z]  INFO : Connector.initialize - Ruby version 1.9.2
+[2014-04-03 13:23:10 Z]  INFO : QCConnection.connect - Connecting to Quality Center
+[2014-04-03 13:23:11 Z]  INFO : QCConnection.connect - Connected to Quality Center at http://vmwin2008qc11:8080/qcbin/wcomsrv.dll (version 11.0.0.8258)
+[2014-04-03 13:23:12 Z]  INFO : QCConnection.connect -   Domain: DEMO
+[2014-04-03 13:23:12 Z]  INFO : QCConnection.connect -   Project: DEMO1
+[2014-04-03 13:23:12 Z]  INFO : RallyConnection.connect - Connecting to Rally
+[2014-04-03 13:23:19 Z]  INFO : RallyConnection.connect - Connected to Rally at https://audemo.rallydev.com/slm -  Workspace: Integrations
+[2014-04-03 13:23:19 Z]  INFO : RallyConnection.connect -   Projects: Shopping Team
+[2014-04-03 13:23:19 Z]  INFO : Connector.validate - Beginning validation
+[2014-04-03 13:23:22 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://audemo.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-03-08.</OperationResultWarning>
+  </Warnings>
+[2014-04-03 13:23:24 Z]  INFO : Connector.validate - Validation complete
+[2014-04-03 13:23:24 Z]  INFO : ConnectorRunner.run_services - Last Run 2014-03-03 23:12:31 UTC  --- Now 2014-04-03 13:23:24 UTC
+[2014-04-03 13:23:24 Z]  INFO : ConnectorRunner.process_service - Starting Service UPDATE_RALLY_TO_QUALITY CENTER
+[2014-04-03 13:23:24 Z]  INFO : RallyConnection.find_updates - Find Rally defects updated after 2014-03-03 23:12:26 UTC (last run time - epsilon seconds)
+[2014-04-03 13:23:25 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://audemo.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-03-08.</OperationResultWarning>
+  </Warnings>
+[2014-04-03 13:23:25 Z]  INFO : RallyConnection.find_updates -   Found 0 updated defects in Rally
+[2014-04-03 13:23:25 Z]  INFO : ConnectorRunner.process_service - Finished Service UPDATE_RALLY_TO_QUALITY CENTER
+[2014-04-03 13:23:25 Z]  INFO : ConnectorRunner.process_service - Starting Service UPDATE_QUALITY CENTER_TO_RALLY
+[2014-04-03 13:23:25 Z]  INFO : QCConnection.find_updates - Looking for updates made after QC server time of: '2014-03-03 16:12:09'
+[2014-04-03 13:23:25 Z]  INFO : QCConnection.find_updates -   Found 1 Updated bugs in QC
+[2014-04-03 13:23:25 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://audemo.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-03-08.</OperationResultWarning>
+  </Warnings>
+[2014-04-03 13:23:25 Z]  WARN : RallyConnection.initialize - Could not find Rally defect with ObjectID 4843938
+[2014-04-03 13:23:25 Z]  WARN : ConnectorRunner.exception - Message Could not find Rally defect with ObjectID 4843938
+[2014-04-03 13:23:25 Z]  INFO : ConnectorRunner.process_service - Finished Service UPDATE_QUALITY CENTER_TO_RALLY
+[2014-04-03 13:23:25 Z]  INFO : ConnectorRunner.process_service - Starting Service COPY_QUALITY CENTER_TO_RALLY
+[2014-04-03 13:23:25 Z]  INFO : QCConnection.find_new - find_new query: BG_USER_01 ="" and BG_USER_02 ="Y"
+[2014-04-03 13:23:25 Z]  INFO : QCConnection.find_new -   Found 1 New bugs in QC
+[2014-04-03 13:23:25 Z]  INFO : Connector.copy_to_rally - Copy to Rally
+[2014-04-03 13:23:26 Z]  INFO : RallyConnection.create_internal -   Created DE17
+[2014-04-03 13:23:26 Z]  INFO : Connector.copy_to_rally - Quality Center bug 127 copied to Rally defect DE17
+[2014-04-03 13:23:26 Z]  INFO : ConnectorRunner.process_service - Finished Service COPY_QUALITY CENTER_TO_RALLY
+[2014-04-03 13:23:27 Z]  INFO : QCConnection.disconnect - Disconnected from Quality Center
+[2014-04-03 13:23:27 Z]  INFO : ConnectorRunner.run_services - time file written with value of 2014-04-03 13:23:24 UTC
+[2014-04-03 13:23:27 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 0 items updated from Rally to Quality center 
+[2014-04-03 13:23:27 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 0 items updated from Quality center to Rally 
+[2014-04-03 13:23:27 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 1 items copied from Quality center to Rally 
+[2014-04-03 13:23:27 Z]  INFO : ConnectorRunner.log_service_statistics - qc_config_defects.xml: service run took 18 seconds
+
+************************************************************************************************************
+
+     rally2_qc_connector
+         pid: 3216   
+         starting at: 2014-04-03 13:26:20 Z
+         cwd: C:/Program Files/RallyConnectorforQualityCenter_DEFECTS
+         configs: qc_config_defects.xml
+         interval: -1
+
+************************************************************************************************************
+
+[2014-04-03 13:26:20 Z]   ANY : ConnectorRunner.block in run - processing to commence using content from qc_config_defects.xml
+[2014-04-03 13:26:20 Z]  INFO : Class.read_config_file - qc_config_defects.xml last modified 2014-03-05 15:13:25 UTC, size: 4363 chars
+[2014-04-03 13:26:20 Z]  INFO : RallyConnection.initialize - Initializing Rally connection version 2.7.9
+[2014-04-03 13:26:20 Z]  INFO : RallyConnection.initialize - Rally Web Services version 1.16
+[2014-04-03 13:26:20 Z]  INFO : QCConnection.initialize - Initializing Quality Center connection version 2.7.9
+[2014-04-03 13:26:20 Z]  INFO : Connector.initialize - Ruby platform i386-mingw32
+[2014-04-03 13:26:20 Z]  INFO : Connector.initialize - Ruby version 1.9.2
+[2014-04-03 13:26:20 Z]  INFO : QCConnection.connect - Connecting to Quality Center
+[2014-04-03 13:26:20 Z]  INFO : QCConnection.connect - Connected to Quality Center at http://vmwin2008qc11:8080/qcbin/wcomsrv.dll (version 11.0.0.8258)
+[2014-04-03 13:26:21 Z]  INFO : QCConnection.connect -   Domain: DEMO
+[2014-04-03 13:26:21 Z]  INFO : QCConnection.connect -   Project: DEMO1
+[2014-04-03 13:26:21 Z]  INFO : RallyConnection.connect - Connecting to Rally
+[2014-04-03 13:26:28 Z]  INFO : RallyConnection.connect - Connected to Rally at https://audemo.rallydev.com/slm -  Workspace: Integrations
+[2014-04-03 13:26:28 Z]  INFO : RallyConnection.connect -   Projects: Shopping Team
+[2014-04-03 13:26:28 Z]  INFO : Connector.validate - Beginning validation
+[2014-04-03 13:26:31 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://audemo.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-03-08.</OperationResultWarning>
+  </Warnings>
+[2014-04-03 13:26:33 Z]  INFO : Connector.validate - Validation complete
+[2014-04-03 13:26:33 Z]  INFO : ConnectorRunner.run_services - Last Run 2014-04-03 13:23:24 UTC  --- Now 2014-04-03 13:26:33 UTC
+[2014-04-03 13:26:33 Z]  INFO : ConnectorRunner.process_service - Starting Service UPDATE_RALLY_TO_QUALITY CENTER
+[2014-04-03 13:26:33 Z]  INFO : RallyConnection.find_updates - Find Rally defects updated after 2014-04-03 13:23:19 UTC (last run time - epsilon seconds)
+[2014-04-03 13:26:34 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://audemo.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-03-08.</OperationResultWarning>
+  </Warnings>
+[2014-04-03 13:26:34 Z]  INFO : RallyConnection.find_updates -   Found 1 updated defects in Rally
+[2014-04-03 13:26:34 Z]  INFO : QCConnection.update_internal -   Updated bug 127 in QC
+[2014-04-03 13:26:34 Z]  INFO : Connector.update_other - Quality Center bug 127 updated from Rally defect DE17
+[2014-04-03 13:26:34 Z]  INFO : ConnectorRunner.process_service - Finished Service UPDATE_RALLY_TO_QUALITY CENTER
+[2014-04-03 13:26:34 Z]  INFO : ConnectorRunner.process_service - Starting Service UPDATE_QUALITY CENTER_TO_RALLY
+[2014-04-03 13:26:34 Z]  INFO : QCConnection.find_updates - Looking for updates made after QC server time of: '2014-04-03 07:23:03'
+[2014-04-03 13:26:34 Z]  INFO : QCConnection.find_updates -   Found 1 Updated bugs in QC
+[2014-04-03 13:26:34 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://audemo.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-03-08.</OperationResultWarning>
+  </Warnings>
+[2014-04-03 13:26:34 Z]  INFO : RallyConnection.update_internal -   Updating DE17
+[2014-04-03 13:26:35 Z]  INFO : Connector.update_rally - Rally defect DE17 updated from Quality Center bug 127
+[2014-04-03 13:26:35 Z]  INFO : ConnectorRunner.process_service - Finished Service UPDATE_QUALITY CENTER_TO_RALLY
+[2014-04-03 13:26:35 Z]  INFO : ConnectorRunner.process_service - Starting Service COPY_QUALITY CENTER_TO_RALLY
+[2014-04-03 13:26:35 Z]  INFO : QCConnection.find_new - find_new query: BG_USER_01 ="" and BG_USER_02 ="Y"
+[2014-04-03 13:26:35 Z]  INFO : QCConnection.find_new -   Found 0 New bugs in QC
+[2014-04-03 13:26:35 Z]  INFO : ConnectorRunner.process_service - Finished Service COPY_QUALITY CENTER_TO_RALLY
+[2014-04-03 13:26:35 Z]  INFO : QCConnection.disconnect - Disconnected from Quality Center
+[2014-04-03 13:26:35 Z]  INFO : ConnectorRunner.run_services - time file written with value of 2014-04-03 13:26:33 UTC
+[2014-04-03 13:26:35 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 1 items updated from Rally to Quality center 
+[2014-04-03 13:26:35 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 1 items updated from Quality center to Rally 
+[2014-04-03 13:26:35 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 0 items copied from Quality center to Rally 
+[2014-04-03 13:26:35 Z]  INFO : ConnectorRunner.log_service_statistics - qc_config_defects.xml: service run took 15 seconds
+
+************************************************************************************************************
+
+     rally2_qc_connector
+         pid: 2472   
+         starting at: 2014-04-03 13:28:08 Z
+         cwd: C:/Program Files/RallyConnectorforQualityCenter_DEFECTS
+         configs: qc_config_defects.xml
+         interval: -1
+
+************************************************************************************************************
+
+[2014-04-03 13:28:08 Z]   ANY : ConnectorRunner.block in run - processing to commence using content from qc_config_defects.xml
+[2014-04-03 13:28:08 Z]  INFO : Class.read_config_file - qc_config_defects.xml last modified 2014-03-05 15:13:25 UTC, size: 4363 chars
+[2014-04-03 13:28:08 Z]  INFO : RallyConnection.initialize - Initializing Rally connection version 2.7.9
+[2014-04-03 13:28:08 Z]  INFO : RallyConnection.initialize - Rally Web Services version 1.16
+[2014-04-03 13:28:08 Z]  INFO : QCConnection.initialize - Initializing Quality Center connection version 2.7.9
+[2014-04-03 13:28:08 Z]  INFO : Connector.initialize - Ruby platform i386-mingw32
+[2014-04-03 13:28:08 Z]  INFO : Connector.initialize - Ruby version 1.9.2
+[2014-04-03 13:28:08 Z]  INFO : QCConnection.connect - Connecting to Quality Center
+[2014-04-03 13:28:09 Z]  INFO : QCConnection.connect - Connected to Quality Center at http://vmwin2008qc11:8080/qcbin/wcomsrv.dll (version 11.0.0.8258)
+[2014-04-03 13:28:10 Z]  INFO : QCConnection.connect -   Domain: DEMO
+[2014-04-03 13:28:10 Z]  INFO : QCConnection.connect -   Project: DEMO1
+[2014-04-03 13:28:10 Z]  INFO : RallyConnection.connect - Connecting to Rally
+[2014-04-03 13:28:17 Z]  INFO : RallyConnection.connect - Connected to Rally at https://audemo.rallydev.com/slm -  Workspace: Integrations
+[2014-04-03 13:28:17 Z]  INFO : RallyConnection.connect -   Projects: Shopping Team
+[2014-04-03 13:28:17 Z]  INFO : Connector.validate - Beginning validation
+[2014-04-03 13:28:20 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://audemo.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-03-08.</OperationResultWarning>
+  </Warnings>
+[2014-04-03 13:28:22 Z]  INFO : Connector.validate - Validation complete
+[2014-04-03 13:28:22 Z]  INFO : ConnectorRunner.run_services - Last Run 2014-04-03 13:26:33 UTC  --- Now 2014-04-03 13:28:22 UTC
+[2014-04-03 13:28:22 Z]  INFO : ConnectorRunner.process_service - Starting Service UPDATE_RALLY_TO_QUALITY CENTER
+[2014-04-03 13:28:22 Z]  INFO : RallyConnection.find_updates - Find Rally defects updated after 2014-04-03 13:26:28 UTC (last run time - epsilon seconds)
+[2014-04-03 13:28:22 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://audemo.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-03-08.</OperationResultWarning>
+  </Warnings>
+[2014-04-03 13:28:23 Z]  INFO : RallyConnection.find_updates -   Found 1 updated defects in Rally
+[2014-04-03 13:28:23 Z]  INFO : QCConnection.update_internal -   Updated bug 127 in QC
+[2014-04-03 13:28:23 Z]  INFO : Connector.update_other - Quality Center bug 127 updated from Rally defect DE17
+[2014-04-03 13:28:23 Z]  INFO : ConnectorRunner.process_service - Finished Service UPDATE_RALLY_TO_QUALITY CENTER
+[2014-04-03 13:28:23 Z]  INFO : ConnectorRunner.process_service - Starting Service UPDATE_QUALITY CENTER_TO_RALLY
+[2014-04-03 13:28:23 Z]  INFO : QCConnection.find_updates - Looking for updates made after QC server time of: '2014-04-03 07:26:11'
+[2014-04-03 13:28:23 Z]  INFO : QCConnection.find_updates -   Found 1 Updated bugs in QC
+[2014-04-03 13:28:23 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://audemo.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-03-08.</OperationResultWarning>
+  </Warnings>
+[2014-04-03 13:28:23 Z]  INFO : RallyConnection.update_internal -   Updating DE17
+[2014-04-03 13:28:24 Z]  INFO : Connector.update_rally - Rally defect DE17 updated from Quality Center bug 127
+[2014-04-03 13:28:24 Z]  INFO : ConnectorRunner.process_service - Finished Service UPDATE_QUALITY CENTER_TO_RALLY
+[2014-04-03 13:28:24 Z]  INFO : ConnectorRunner.process_service - Starting Service COPY_QUALITY CENTER_TO_RALLY
+[2014-04-03 13:28:24 Z]  INFO : QCConnection.find_new - find_new query: BG_USER_01 ="" and BG_USER_02 ="Y"
+[2014-04-03 13:28:24 Z]  INFO : QCConnection.find_new -   Found 0 New bugs in QC
+[2014-04-03 13:28:24 Z]  INFO : ConnectorRunner.process_service - Finished Service COPY_QUALITY CENTER_TO_RALLY
+[2014-04-03 13:28:24 Z]  INFO : QCConnection.disconnect - Disconnected from Quality Center
+[2014-04-03 13:28:24 Z]  INFO : ConnectorRunner.run_services - time file written with value of 2014-04-03 13:28:22 UTC
+[2014-04-03 13:28:24 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 1 items updated from Rally to Quality center 
+[2014-04-03 13:28:24 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 1 items updated from Quality center to Rally 
+[2014-04-03 13:28:24 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 0 items copied from Quality center to Rally 
+[2014-04-03 13:28:24 Z]  INFO : ConnectorRunner.log_service_statistics - qc_config_defects.xml: service run took 16 seconds
+
+************************************************************************************************************
+
+     rally2_qc_connector
+         pid: 1900   
+         starting at: 2014-04-03 19:44:32 Z
+         cwd: C:/Program Files/RallyConnectorforQualityCenter_DEFECTS
+         configs: qc_config_defects.xml
+         interval: -1
+
+************************************************************************************************************
+
+[2014-04-03 19:44:32 Z]   ANY : ConnectorRunner.block in run - processing to commence using content from qc_config_defects.xml
+[2014-04-03 19:44:32 Z]  INFO : Class.read_config_file - qc_config_defects.xml last modified 2014-04-03 19:38:56 UTC, size: 4363 chars
+[2014-04-03 19:44:32 Z]  INFO : RallyConnection.initialize - Initializing Rally connection version 2.7.9
+[2014-04-03 19:44:32 Z]  INFO : RallyConnection.initialize - Rally Web Services version 1.16
+[2014-04-03 19:44:32 Z]  INFO : QCConnection.initialize - Initializing Quality Center connection version 2.7.9
+[2014-04-03 19:44:32 Z]  INFO : Connector.initialize - Ruby platform i386-mingw32
+[2014-04-03 19:44:32 Z]  INFO : Connector.initialize - Ruby version 1.9.2
+[2014-04-03 19:44:32 Z]  INFO : QCConnection.connect - Connecting to Quality Center
+[2014-04-03 19:44:32 Z]  INFO : QCConnection.connect - Connected to Quality Center at http://vmwin2008qc11:8080/qcbin/wcomsrv.dll (version 11.0.0.8258)
+[2014-04-03 19:44:33 Z]  INFO : QCConnection.connect -   Domain: DEMO
+[2014-04-03 19:44:33 Z]  INFO : QCConnection.connect -   Project: DEMO1
+[2014-04-03 19:44:33 Z]  INFO : RallyConnection.connect - Connecting to Rally
+[2014-04-03 19:44:40 Z]  INFO : RallyConnection.connect - Connected to Rally at https://demo02.rallydev.com/slm -  Workspace: Integrations
+[2014-04-03 19:44:40 Z]  INFO : RallyConnection.connect -   Projects: Shopping Team
+[2014-04-03 19:44:40 Z]  INFO : Connector.validate - Beginning validation
+[2014-04-03 19:44:43 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://demo02.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-03-11.</OperationResultWarning>
+  </Warnings>
+[2014-04-03 19:44:45 Z]  INFO : Connector.validate - Validation complete
+[2014-04-03 19:44:45 Z]  INFO : ConnectorRunner.run_services - Last Run 2014-04-03 13:28:22 UTC  --- Now 2014-04-03 19:44:45 UTC
+[2014-04-03 19:44:45 Z]  INFO : ConnectorRunner.process_service - Starting Service UPDATE_RALLY_TO_QUALITY CENTER
+[2014-04-03 19:44:45 Z]  INFO : RallyConnection.find_updates - Find Rally defects updated after 2014-04-03 13:28:17 UTC (last run time - epsilon seconds)
+[2014-04-03 19:44:46 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://demo02.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-03-11.</OperationResultWarning>
+  </Warnings>
+[2014-04-03 19:44:46 Z]  INFO : RallyConnection.find_updates -   Found 0 updated defects in Rally
+[2014-04-03 19:44:46 Z]  INFO : ConnectorRunner.process_service - Finished Service UPDATE_RALLY_TO_QUALITY CENTER
+[2014-04-03 19:44:46 Z]  INFO : ConnectorRunner.process_service - Starting Service UPDATE_QUALITY CENTER_TO_RALLY
+[2014-04-03 19:44:46 Z]  INFO : QCConnection.find_updates - Looking for updates made after QC server time of: '2014-04-03 07:28:01'
+[2014-04-03 19:44:46 Z]  INFO : QCConnection.find_updates -   Found 1 Updated bugs in QC
+[2014-04-03 19:44:46 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://demo02.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-03-11.</OperationResultWarning>
+  </Warnings>
+[2014-04-03 19:44:46 Z]  WARN : RallyConnection.initialize - Could not find Rally defect with ObjectID 4953196
+[2014-04-03 19:44:46 Z]  WARN : ConnectorRunner.exception - Message Could not find Rally defect with ObjectID 4953196
+[2014-04-03 19:44:46 Z]  INFO : ConnectorRunner.process_service - Finished Service UPDATE_QUALITY CENTER_TO_RALLY
+[2014-04-03 19:44:46 Z]  INFO : ConnectorRunner.process_service - Starting Service COPY_QUALITY CENTER_TO_RALLY
+[2014-04-03 19:44:46 Z]  INFO : QCConnection.find_new - find_new query: BG_USER_01 ="" and BG_USER_02 ="Y"
+[2014-04-03 19:44:46 Z]  INFO : QCConnection.find_new -   Found 1 New bugs in QC
+[2014-04-03 19:44:46 Z]  INFO : Connector.copy_to_rally - Copy to Rally
+[2014-04-03 19:44:46 Z]  WARN : OtherEnumFieldHandler.transform_out - For BG_PRIORITY field could not transform_out()
+[2014-04-03 19:44:47 Z]  INFO : RallyConnection.create_internal -   Created DE17
+[2014-04-03 19:44:47 Z]  INFO : Connector.copy_to_rally - Quality Center bug 128 copied to Rally defect DE17
+[2014-04-03 19:44:47 Z]  INFO : ConnectorRunner.process_service - Finished Service COPY_QUALITY CENTER_TO_RALLY
+[2014-04-03 19:44:48 Z]  INFO : QCConnection.disconnect - Disconnected from Quality Center
+[2014-04-03 19:44:48 Z]  INFO : ConnectorRunner.run_services - time file written with value of 2014-04-03 19:44:45 UTC
+[2014-04-03 19:44:48 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 0 items updated from Rally to Quality center 
+[2014-04-03 19:44:48 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 0 items updated from Quality center to Rally 
+[2014-04-03 19:44:48 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 1 items copied from Quality center to Rally 
+[2014-04-03 19:44:48 Z]  INFO : ConnectorRunner.log_service_statistics - qc_config_defects.xml: service run took 16 seconds
+
+************************************************************************************************************
+
+     rally2_qc_connector
+         pid: 896   
+         starting at: 2014-04-03 19:48:01 Z
+         cwd: C:/Program Files/RallyConnectorforQualityCenter_DEFECTS
+         configs: qc_config_defects.xml
+         interval: -1
+
+************************************************************************************************************
+
+[2014-04-03 19:48:01 Z]   ANY : ConnectorRunner.block in run - processing to commence using content from qc_config_defects.xml
+[2014-04-03 19:48:01 Z]  INFO : Class.read_config_file - qc_config_defects.xml last modified 2014-04-03 19:38:56 UTC, size: 4363 chars
+[2014-04-03 19:48:01 Z]  INFO : RallyConnection.initialize - Initializing Rally connection version 2.7.9
+[2014-04-03 19:48:01 Z]  INFO : RallyConnection.initialize - Rally Web Services version 1.16
+[2014-04-03 19:48:01 Z]  INFO : QCConnection.initialize - Initializing Quality Center connection version 2.7.9
+[2014-04-03 19:48:01 Z]  INFO : Connector.initialize - Ruby platform i386-mingw32
+[2014-04-03 19:48:01 Z]  INFO : Connector.initialize - Ruby version 1.9.2
+[2014-04-03 19:48:01 Z]  INFO : QCConnection.connect - Connecting to Quality Center
+[2014-04-03 19:48:01 Z]  INFO : QCConnection.connect - Connected to Quality Center at http://vmwin2008qc11:8080/qcbin/wcomsrv.dll (version 11.0.0.8258)
+[2014-04-03 19:48:02 Z]  INFO : QCConnection.connect -   Domain: DEMO
+[2014-04-03 19:48:02 Z]  INFO : QCConnection.connect -   Project: DEMO1
+[2014-04-03 19:48:02 Z]  INFO : RallyConnection.connect - Connecting to Rally
+[2014-04-03 19:48:09 Z]  INFO : RallyConnection.connect - Connected to Rally at https://demo02.rallydev.com/slm -  Workspace: Integrations
+[2014-04-03 19:48:09 Z]  INFO : RallyConnection.connect -   Projects: Shopping Team
+[2014-04-03 19:48:09 Z]  INFO : Connector.validate - Beginning validation
+[2014-04-03 19:48:12 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://demo02.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-03-11.</OperationResultWarning>
+  </Warnings>
+[2014-04-03 19:48:14 Z]  INFO : Connector.validate - Validation complete
+[2014-04-03 19:48:14 Z]  INFO : ConnectorRunner.run_services - Last Run 2014-04-03 19:44:45 UTC  --- Now 2014-04-03 19:48:14 UTC
+[2014-04-03 19:48:14 Z]  INFO : ConnectorRunner.process_service - Starting Service UPDATE_RALLY_TO_QUALITY CENTER
+[2014-04-03 19:48:14 Z]  INFO : RallyConnection.find_updates - Find Rally defects updated after 2014-04-03 19:44:40 UTC (last run time - epsilon seconds)
+[2014-04-03 19:48:14 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://demo02.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-03-11.</OperationResultWarning>
+  </Warnings>
+[2014-04-03 19:48:15 Z]  INFO : RallyConnection.find_updates -   Found 1 updated defects in Rally
+[2014-04-03 19:48:15 Z]  INFO : QCConnection.update_internal -   Updated bug 128 in QC
+[2014-04-03 19:48:15 Z]  INFO : Connector.update_other - Quality Center bug 128 updated from Rally defect DE17
+[2014-04-03 19:48:15 Z]  INFO : ConnectorRunner.process_service - Finished Service UPDATE_RALLY_TO_QUALITY CENTER
+[2014-04-03 19:48:15 Z]  INFO : ConnectorRunner.process_service - Starting Service UPDATE_QUALITY CENTER_TO_RALLY
+[2014-04-03 19:48:15 Z]  INFO : QCConnection.find_updates - Looking for updates made after QC server time of: '2014-04-03 13:44:24'
+[2014-04-03 19:48:15 Z]  INFO : QCConnection.find_updates -   Found 1 Updated bugs in QC
+[2014-04-03 19:48:15 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://demo02.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-03-11.</OperationResultWarning>
+  </Warnings>
+[2014-04-03 19:48:15 Z]  INFO : RallyConnection.update_internal -   Updating DE17
+[2014-04-03 19:48:16 Z]  INFO : Connector.update_rally - Rally defect DE17 updated from Quality Center bug 128
+[2014-04-03 19:48:16 Z]  INFO : ConnectorRunner.process_service - Finished Service UPDATE_QUALITY CENTER_TO_RALLY
+[2014-04-03 19:48:16 Z]  INFO : ConnectorRunner.process_service - Starting Service COPY_QUALITY CENTER_TO_RALLY
+[2014-04-03 19:48:16 Z]  INFO : QCConnection.find_new - find_new query: BG_USER_01 ="" and BG_USER_02 ="Y"
+[2014-04-03 19:48:16 Z]  INFO : QCConnection.find_new -   Found 0 New bugs in QC
+[2014-04-03 19:48:16 Z]  INFO : ConnectorRunner.process_service - Finished Service COPY_QUALITY CENTER_TO_RALLY
+[2014-04-03 19:48:16 Z]  INFO : QCConnection.disconnect - Disconnected from Quality Center
+[2014-04-03 19:48:16 Z]  INFO : ConnectorRunner.run_services - time file written with value of 2014-04-03 19:48:14 UTC
+[2014-04-03 19:48:16 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 1 items updated from Rally to Quality center 
+[2014-04-03 19:48:16 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 1 items updated from Quality center to Rally 
+[2014-04-03 19:48:16 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_defects.xml: 0 items copied from Quality center to Rally 
+[2014-04-03 19:48:16 Z]  INFO : ConnectorRunner.log_service_statistics - qc_config_defects.xml: service run took 15 seconds

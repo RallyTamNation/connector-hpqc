@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<config>
+  <RallyConnection>
+    <Url>demo01.rallydev.com</Url>
+    <WorkspaceName>Integrations-RP</WorkspaceName>
+    <Projects>
+        <Project>Shopping Team</Project>
+    </Projects>
+    <User>sara@acme.com</User>
+    <Password>encoded-U-m-F-s-b-H-l-P-T-i-E-=-</Password>
+    <ArtifactType>HierarchicalRequirement</ArtifactType>
+    <ExternalIDField>QCRequirementID</ExternalIDField>
+  </RallyConnection>
+
+  <QCConnection>
+    <Url>vmwin2008qc11:8080</Url>
+    <Domain>DEMO</Domain>
+    <Project>DEMO1</Project>
+    <User>sara</User>
+    <Password>encoded-c-m-F-s-b-H-l-k-Z-X-Y-=-</Password>
+    <ArtifactType>REQ</ArtifactType>
+    <IDField>RQ_REQ_ID</IDField>
+    <ExternalIDField>RQ_USER_01</ExternalIDField>
+    <ExternalEndUserIDField>RQ_USER_03</ExternalEndUserIDField>
+	<CopySelectors>
+      <CopySelector>RQ_USER_02 = Y</CopySelector>
+	</CopySelectors>
+  </QCConnection>
+
+  <Connector>
+    <FieldMapping>
+	<Field><Rally>Name</Rally><Other>RQ_REQ_NAME</Other></Field>
+	<Field><Rally>Description</Rally><Other>RQ_REQ_COMMENT</Other></Field>
+	<Field><Rally>Owner</Rally><Other>RQ_REQ_AUTHOR</Other></Field>
+    </FieldMapping>
+	
+	<!--
+	<RallyFieldHandlers>
+		<RallyNameIDFieldHandler><FieldName>Name</FieldName></RallyNameIDFieldHandler>
+	</RallyFieldHandlers>
+	-->
+    
+    <OtherFieldHandlers>
+
+	<OtherUserFieldHandler>
+	  <FieldName>RQ_REQ_AUTHOR</FieldName>
+	  <Domain>acme.com</Domain>
+	</OtherUserFieldHandler>
+
+        <QCRtfFieldHandler>
+           <FieldName>RQ_REQ_COMMENT</FieldName>
+        </QCRtfFieldHandler>
+
+    </OtherFieldHandlers>
+  </Connector>
+
+  <ConnectorRunner>
+        <Preview>false</Preview>
+        <LogLevel>Debug</LogLevel>
+        <Services>COPY_RALLY_TO_OTHER</Services>
+	<!--<Services>UPDATE_RALLY_TO_OTHER,COPY_OTHER_TO_RALLY</Services>-->
+  </ConnectorRunner>
+</config>

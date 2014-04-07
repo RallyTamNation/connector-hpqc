@@ -1,0 +1,252 @@
+# Logfile created on 2014-04-03 08:08:57 -0600 by logger.rb/25413
+
+************************************************************************************************************
+
+     rally2_qc_connector
+         pid: 3060   
+         starting at: 2014-04-03 14:10:00 Z
+         cwd: C:/Program Files/RallyConnectorforQualityCenter_TESTS
+         configs: qc_config_test.xml
+         interval: -1
+
+************************************************************************************************************
+
+[2014-04-03 14:10:00 Z]   ANY : ConnectorRunner.block in run - processing to commence using content from qc_config_test.xml
+[2014-04-03 14:10:00 Z]  INFO : Class.read_config_file - qc_config_test.xml last modified 2014-04-03 14:07:42 UTC, size: 1743 chars
+[2014-04-03 14:10:01 Z]  INFO : RallyConnection.initialize - Initializing Rally connection version 2.7.9
+[2014-04-03 14:10:01 Z]  INFO : RallyConnection.initialize - Rally Web Services version 1.16
+[2014-04-03 14:10:01 Z]  INFO : QCConnection.initialize - Initializing Quality Center connection version 2.7.9
+[2014-04-03 14:10:01 Z]  INFO : Connector.initialize - Ruby platform i386-mingw32
+[2014-04-03 14:10:01 Z]  INFO : Connector.initialize - Ruby version 1.9.2
+[2014-04-03 14:10:01 Z]  INFO : QCConnection.connect - Connecting to Quality Center
+[2014-04-03 14:10:01 Z] DEBUG : QCConnection.block in identify_qc_version - Preparing to open Registry to examine: Software\Classes\CLSID\{C5CBD7B2-490C-45f5-8C40-B8C3D108E6D7}\InprocServer32
+[2014-04-03 14:10:01 Z] DEBUG : QCConnection.block in identify_qc_version - Registry Software\Classes\CLSID\{C5CBD7B2-490C-45f5-8C40-B8C3D108E6D7}\InprocServer32 opened...
+[2014-04-03 14:10:01 Z] DEBUG : QCConnection.block (2 levels) in identify_qc_version - Registry path to HPQC OTAClient.dll ==> C:\DOCUME~1\ALLUSE~1\APPLIC~1\HP\ALM-CL~1\VMWIN2~1\OTACLI~1.DLL
+[2014-04-03 14:10:01 Z] DEBUG : QCConnection.win_path_expanded - expanded Registry path to DLL target: C:/Documents and Settings/All Users/Application Data/HP/ALM-Client/vmwin2008qc11/OTAClient.dll
+[2014-04-03 14:10:01 Z]  INFO : QCConnection.connect - Connected to Quality Center at http://vmwin2008qc11:8080/qcbin/wcomsrv.dll (version 11.0.0.8258)
+[2014-04-03 14:10:02 Z]  INFO : QCConnection.connect -   Domain: DEMO
+[2014-04-03 14:10:02 Z]  INFO : QCConnection.connect -   Project: DEMO1
+[2014-04-03 14:10:02 Z]  INFO : RallyConnection.connect - Connecting to Rally
+[2014-04-03 14:10:08 Z]  INFO : RallyConnection.connect - Connected to Rally at https://demo01.rallydev.com/slm -  Workspace: Integrations
+[2014-04-03 14:10:08 Z]  INFO : RallyConnection.connect -   Projects: Shopping Team
+[2014-04-03 14:10:08 Z]  INFO : Connector.validate - Beginning validation
+[2014-04-03 14:10:08 Z] DEBUG : RallyConnection.validate - Rally Connection - user entry "sara@acme.com" detected in config file
+[2014-04-03 14:10:08 Z] DEBUG : RallyConnection.validate - Rally Connection - password entry detected in config file
+[2014-04-03 14:10:08 Z] DEBUG : RallyConnection.validate - Rally Connection - artifact type validated
+[2014-04-03 14:10:10 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://demo01.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-03-11.</OperationResultWarning>
+  </Warnings>
+[2014-04-03 14:10:12 Z] DEBUG : RallyConnection.validate - Rally Connection - IDField entry "ObjectID" validated
+[2014-04-03 14:10:12 Z] DEBUG : RallyConnection.validate - Rally Connection - ExternalIDField entry "QCTestID" validated
+[2014-04-03 14:10:12 Z] DEBUG : RallyConnection.validate - Rally Connection - FieldHandler target fields existence validated
+[2014-04-03 14:10:12 Z] DEBUG : RallyConnection.validate - Rally Connection - Field Defaults settings validated
+[2014-04-03 14:10:12 Z] DEBUG : Connector.validate - RallyConnection validate succeeded
+[2014-04-03 14:10:12 Z] DEBUG : QCConnection.validate - Quality Center Connection - user entry "sara" detected in config file
+[2014-04-03 14:10:12 Z] DEBUG : QCConnection.validate - Quality Center Connection - password entry detected in config file
+[2014-04-03 14:10:12 Z] DEBUG : QCConnection.validate - Quality Center Connection - artifact type validated
+[2014-04-03 14:10:12 Z] DEBUG : QCConnection.validate - Quality Center Connection - IDField entry "TS_TEST_ID" validated
+[2014-04-03 14:10:12 Z] DEBUG : QCConnection.validate - Quality Center Connection - ExternalIDField entry "TS_USER_01" validated
+[2014-04-03 14:10:12 Z] DEBUG : QCConnection.validate - Quality Center Connection - FieldHandler target fields existence validated
+[2014-04-03 14:10:12 Z] DEBUG : QCConnection.validate - Quality Center Connection - Field Defaults settings validated
+[2014-04-03 14:10:12 Z] DEBUG : Connector.validate - Quality Center Connection validate succeeded
+[2014-04-03 14:10:12 Z] DEBUG : Connector.block in validate - RallyConnection field_mapping target "Name" existence validated
+[2014-04-03 14:10:12 Z] DEBUG : Connector.block in validate - Quality Center Connection field_mapping target "TS_NAME" existence validated
+[2014-04-03 14:10:12 Z] DEBUG : Connector.block in validate - RallyConnection field_mapping target "Description" existence validated
+[2014-04-03 14:10:12 Z] DEBUG : Connector.block in validate - Quality Center Connection field_mapping target "TS_DESCRIPTION" existence validated
+[2014-04-03 14:10:12 Z] DEBUG : Connector.block in validate - RallyConnection field_mapping target "WorkProduct" existence validated
+[2014-04-03 14:10:12 Z] DEBUG : Connector.block in validate - Quality Center Connection field_mapping target "TS_USER_03" existence validated
+[2014-04-03 14:10:12 Z] DEBUG : Connector.block in validate - Rally Connection field_handler validation for "WorkProduct" succeeded
+[2014-04-03 14:10:12 Z] DEBUG : Connector.block in validate - Quality Center Connection field_handler validation for "TS_DESCRIPTION" succeeded
+[2014-04-03 14:10:12 Z]  INFO : Connector.validate - Validation complete
+[2014-04-03 14:10:12 Z]  INFO : ConnectorRunner.run_services - Last Run 2014-02-07 17:26:07 UTC  --- Now 2014-04-03 14:10:12 UTC
+[2014-04-03 14:10:12 Z]  INFO : ConnectorRunner.process_service - Starting Service UPDATE_QUALITY CENTER_TO_RALLY
+[2014-04-03 14:10:12 Z]  INFO : QCConnection.find_updates - Looking for updates made after QC server time of: '2014-02-07 10:25:45'
+[2014-04-03 14:10:12 Z]  INFO : QCConnection.find_updates -   Found 1 Updated tests in QC
+[2014-04-03 14:10:13 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://demo01.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-03-11.</OperationResultWarning>
+  </Warnings>
+[2014-04-03 14:10:13 Z]  WARN : RallyConnection.initialize - Could not find Rally testcase with ObjectID 4825441
+[2014-04-03 14:10:13 Z]  WARN : ConnectorRunner.exception - Message Could not find Rally testcase with ObjectID 4825441
+[2014-04-03 14:10:13 Z]  INFO : ConnectorRunner.process_service - Finished Service UPDATE_QUALITY CENTER_TO_RALLY
+[2014-04-03 14:10:13 Z]  INFO : ConnectorRunner.process_service - Starting Service COPY_QUALITY CENTER_TO_RALLY
+[2014-04-03 14:10:13 Z]  INFO : QCConnection.find_new - find_new query: TS_USER_01 ="" and TS_USER_04 ="Y"
+[2014-04-03 14:10:13 Z]  INFO : QCConnection.find_new -   Found 0 New tests in QC
+[2014-04-03 14:10:13 Z]  INFO : ConnectorRunner.process_service - Finished Service COPY_QUALITY CENTER_TO_RALLY
+[2014-04-03 14:10:13 Z]  INFO : QCConnection.disconnect - Disconnected from Quality Center
+[2014-04-03 14:10:13 Z]  INFO : ConnectorRunner.run_services - time file written with value of 2014-04-03 14:10:12 UTC
+[2014-04-03 14:10:13 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_test.xml: 0 items updated from Quality center to Rally 
+[2014-04-03 14:10:13 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_test.xml: 0 items copied from Quality center to Rally 
+[2014-04-03 14:10:13 Z]  INFO : ConnectorRunner.log_service_statistics - qc_config_test.xml: service run took 13 seconds
+
+************************************************************************************************************
+
+     rally2_qc_connector
+         pid: 2560   
+         starting at: 2014-04-03 14:17:19 Z
+         cwd: C:/Program Files/RallyConnectorforQualityCenter_TESTS
+         configs: qc_config_test.xml
+         interval: -1
+
+************************************************************************************************************
+
+[2014-04-03 14:17:19 Z]   ANY : ConnectorRunner.block in run - processing to commence using content from qc_config_test.xml
+[2014-04-03 14:17:19 Z]  INFO : Class.read_config_file - qc_config_test.xml last modified 2014-04-03 14:10:01 UTC, size: 1767 chars
+[2014-04-03 14:17:19 Z]  INFO : RallyConnection.initialize - Initializing Rally connection version 2.7.9
+[2014-04-03 14:17:19 Z]  INFO : RallyConnection.initialize - Rally Web Services version 1.16
+[2014-04-03 14:17:19 Z]  INFO : QCConnection.initialize - Initializing Quality Center connection version 2.7.9
+[2014-04-03 14:17:19 Z]  INFO : Connector.initialize - Ruby platform i386-mingw32
+[2014-04-03 14:17:19 Z]  INFO : Connector.initialize - Ruby version 1.9.2
+[2014-04-03 14:17:19 Z]  INFO : QCConnection.connect - Connecting to Quality Center
+[2014-04-03 14:17:19 Z] DEBUG : QCConnection.block in identify_qc_version - Preparing to open Registry to examine: Software\Classes\CLSID\{C5CBD7B2-490C-45f5-8C40-B8C3D108E6D7}\InprocServer32
+[2014-04-03 14:17:19 Z] DEBUG : QCConnection.block in identify_qc_version - Registry Software\Classes\CLSID\{C5CBD7B2-490C-45f5-8C40-B8C3D108E6D7}\InprocServer32 opened...
+[2014-04-03 14:17:19 Z] DEBUG : QCConnection.block (2 levels) in identify_qc_version - Registry path to HPQC OTAClient.dll ==> C:\DOCUME~1\ALLUSE~1\APPLIC~1\HP\ALM-CL~1\VMWIN2~1\OTACLI~1.DLL
+[2014-04-03 14:17:19 Z] DEBUG : QCConnection.win_path_expanded - expanded Registry path to DLL target: C:/Documents and Settings/All Users/Application Data/HP/ALM-Client/vmwin2008qc11/OTAClient.dll
+[2014-04-03 14:17:19 Z]  INFO : QCConnection.connect - Connected to Quality Center at http://vmwin2008qc11:8080/qcbin/wcomsrv.dll (version 11.0.0.8258)
+[2014-04-03 14:17:20 Z]  INFO : QCConnection.connect -   Domain: DEMO
+[2014-04-03 14:17:20 Z]  INFO : QCConnection.connect -   Project: DEMO1
+[2014-04-03 14:17:20 Z]  INFO : RallyConnection.connect - Connecting to Rally
+[2014-04-03 14:17:26 Z]  INFO : RallyConnection.connect - Connected to Rally at https://demo01.rallydev.com/slm -  Workspace: Integrations
+[2014-04-03 14:17:26 Z]  INFO : RallyConnection.connect -   Projects: Shopping Team
+[2014-04-03 14:17:26 Z]  INFO : Connector.validate - Beginning validation
+[2014-04-03 14:17:26 Z] DEBUG : RallyConnection.validate - Rally Connection - user entry "sara@acme.com" detected in config file
+[2014-04-03 14:17:26 Z] DEBUG : RallyConnection.validate - Rally Connection - password entry detected in config file
+[2014-04-03 14:17:26 Z] DEBUG : RallyConnection.validate - Rally Connection - artifact type validated
+[2014-04-03 14:17:28 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://demo01.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-03-11.</OperationResultWarning>
+  </Warnings>
+[2014-04-03 14:17:30 Z] DEBUG : RallyConnection.validate - Rally Connection - IDField entry "ObjectID" validated
+[2014-04-03 14:17:30 Z] DEBUG : RallyConnection.validate - Rally Connection - ExternalIDField entry "QCTestID" validated
+[2014-04-03 14:17:30 Z] DEBUG : RallyConnection.validate - Rally Connection - FieldHandler target fields existence validated
+[2014-04-03 14:17:30 Z] DEBUG : RallyConnection.validate - Rally Connection - Field Defaults settings validated
+[2014-04-03 14:17:30 Z] DEBUG : Connector.validate - RallyConnection validate succeeded
+[2014-04-03 14:17:30 Z] DEBUG : QCConnection.validate - Quality Center Connection - user entry "sara" detected in config file
+[2014-04-03 14:17:30 Z] DEBUG : QCConnection.validate - Quality Center Connection - password entry detected in config file
+[2014-04-03 14:17:30 Z] DEBUG : QCConnection.validate - Quality Center Connection - artifact type validated
+[2014-04-03 14:17:30 Z] DEBUG : QCConnection.validate - Quality Center Connection - IDField entry "TS_TEST_ID" validated
+[2014-04-03 14:17:30 Z] DEBUG : QCConnection.validate - Quality Center Connection - ExternalIDField entry "TS_USER_01" validated
+[2014-04-03 14:17:30 Z] DEBUG : QCConnection.validate - Quality Center Connection - FieldHandler target fields existence validated
+[2014-04-03 14:17:30 Z] DEBUG : QCConnection.validate - Quality Center Connection - Field Defaults settings validated
+[2014-04-03 14:17:30 Z] DEBUG : Connector.validate - Quality Center Connection validate succeeded
+[2014-04-03 14:17:30 Z] DEBUG : Connector.block in validate - RallyConnection field_mapping target "Name" existence validated
+[2014-04-03 14:17:30 Z] DEBUG : Connector.block in validate - Quality Center Connection field_mapping target "TS_NAME" existence validated
+[2014-04-03 14:17:30 Z] DEBUG : Connector.block in validate - RallyConnection field_mapping target "Description" existence validated
+[2014-04-03 14:17:30 Z] DEBUG : Connector.block in validate - Quality Center Connection field_mapping target "TS_DESCRIPTION" existence validated
+[2014-04-03 14:17:30 Z] DEBUG : Connector.block in validate - RallyConnection field_mapping target "WorkProduct" existence validated
+[2014-04-03 14:17:30 Z] DEBUG : Connector.block in validate - Quality Center Connection field_mapping target "TS_USER_03" existence validated
+[2014-04-03 14:17:30 Z] DEBUG : Connector.block in validate - Rally Connection field_handler validation for "WorkProduct" succeeded
+[2014-04-03 14:17:30 Z] DEBUG : Connector.block in validate - Quality Center Connection field_handler validation for "TS_DESCRIPTION" succeeded
+[2014-04-03 14:17:30 Z]  INFO : Connector.validate - Validation complete
+[2014-04-03 14:17:30 Z]  INFO : ConnectorRunner.run_services - Last Run 2014-04-03 14:10:12 UTC  --- Now 2014-04-03 14:17:30 UTC
+[2014-04-03 14:17:30 Z]  INFO : ConnectorRunner.process_service - Starting Service UPDATE_QUALITY CENTER_TO_RALLY
+[2014-04-03 14:17:30 Z]  INFO : QCConnection.find_updates - Looking for updates made after QC server time of: '2014-04-03 08:09:50'
+[2014-04-03 14:17:30 Z]  INFO : QCConnection.find_updates -   Found 2 Updated tests in QC
+[2014-04-03 14:17:30 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://demo01.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-03-11.</OperationResultWarning>
+  </Warnings>
+[2014-04-03 14:17:30 Z]  WARN : RallyConnection.initialize - Could not find Rally testcase with ObjectID 4824878
+[2014-04-03 14:17:30 Z]  WARN : ConnectorRunner.exception - Message Could not find Rally testcase with ObjectID 4824878
+[2014-04-03 14:17:30 Z]  WARN : RallyConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://demo01.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-03-11.</OperationResultWarning>
+  </Warnings>
+[2014-04-03 14:17:30 Z]  WARN : RallyConnection.initialize - Could not find Rally testcase with ObjectID 4825441
+[2014-04-03 14:17:30 Z]  WARN : ConnectorRunner.exception - Message Could not find Rally testcase with ObjectID 4825441
+[2014-04-03 14:17:30 Z]  INFO : ConnectorRunner.process_service - Finished Service UPDATE_QUALITY CENTER_TO_RALLY
+[2014-04-03 14:17:30 Z]  INFO : ConnectorRunner.process_service - Starting Service COPY_QUALITY CENTER_TO_RALLY
+[2014-04-03 14:17:30 Z]  INFO : QCConnection.find_new - find_new query: TS_USER_01 ="" and TS_USER_04 ="Y"
+[2014-04-03 14:17:30 Z]  INFO : QCConnection.find_new -   Found 1 New tests in QC
+[2014-04-03 14:17:30 Z]  INFO : Connector.copy_to_rally - Copy to Rally
+[2014-04-03 14:17:30 Z] DEBUG : Connector.block in map_fields_to_rally -   Mapping TS_NAME(New Test2Test) - to - Name(New Test2Test)
+[2014-04-03 14:17:31 Z] DEBUG : Connector.block in map_fields_to_rally -   Mapping TS_USER_03(S68) - to - WorkProduct(Move to Oracle)
+[2014-04-03 14:17:33 Z]  INFO : RallyConnection.create_internal -   Created TC18
+[2014-04-03 14:17:33 Z] DEBUG : QCConnection.update_external_id_fields - set QC Test TS_TEST_ID: 58  external id field TS_USER_01 --> |4859852|
+[2014-04-03 14:17:33 Z] DEBUG : QCConnection.update_external_id_fields - set QC Test TS_TEST_ID: 58  external end user id field TS_USER_02 --> |TC18|
+[2014-04-03 14:17:33 Z]  INFO : Connector.copy_to_rally - Quality Center test 58 copied to Rally testcase TC18
+[2014-04-03 14:17:33 Z]  INFO : ConnectorRunner.process_service - Finished Service COPY_QUALITY CENTER_TO_RALLY
+[2014-04-03 14:17:33 Z]  INFO : QCConnection.disconnect - Disconnected from Quality Center
+[2014-04-03 14:17:33 Z]  INFO : ConnectorRunner.run_services - time file written with value of 2014-04-03 14:17:30 UTC
+[2014-04-03 14:17:33 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_test.xml: 0 items updated from Quality center to Rally 
+[2014-04-03 14:17:33 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_test.xml: 1 items copied from Quality center to Rally 
+[2014-04-03 14:17:33 Z]  INFO : ConnectorRunner.log_service_statistics - qc_config_test.xml: service run took 15 seconds
+
+************************************************************************************************************
+
+     rally2_qc_connector
+         pid: 2448   
+         starting at: 2014-04-03 14:32:37 Z
+         cwd: C:/Program Files/RallyConnectorforQualityCenter_TESTS
+         configs: qc_config_run.xml
+         interval: -1
+
+************************************************************************************************************
+
+[2014-04-03 14:32:37 Z]   ANY : ConnectorRunner.block in run - processing to commence using content from qc_config_run.xml
+[2014-04-03 14:32:37 Z]  INFO : Class.read_config_file - qc_config_run.xml last modified 2014-04-03 14:18:56 UTC, size: 2776 chars
+[2014-04-03 14:32:37 Z]  INFO : RallyTestResultConnection.initialize - Initializing Rally connection version 2.7.9
+[2014-04-03 14:32:37 Z]  INFO : RallyTestResultConnection.initialize - Rally Web Services version 1.16
+[2014-04-03 14:32:37 Z]  INFO : QCRunConnection.initialize - Initializing Quality Center Tests connection version 2.7.7
+[2014-04-03 14:32:37 Z]  INFO : Connector.initialize - Ruby platform i386-mingw32
+[2014-04-03 14:32:37 Z]  INFO : Connector.initialize - Ruby version 1.9.2
+[2014-04-03 14:32:37 Z]  INFO : QCRunConnection.connect - Connecting to Quality Center
+[2014-04-03 14:32:38 Z] DEBUG : QCRunConnection.block in identify_qc_version - Preparing to open Registry to examine: Software\Classes\CLSID\{C5CBD7B2-490C-45f5-8C40-B8C3D108E6D7}\InprocServer32
+[2014-04-03 14:32:38 Z] DEBUG : QCRunConnection.block in identify_qc_version - Registry Software\Classes\CLSID\{C5CBD7B2-490C-45f5-8C40-B8C3D108E6D7}\InprocServer32 opened...
+[2014-04-03 14:32:38 Z] DEBUG : QCRunConnection.block (2 levels) in identify_qc_version - Registry path to HPQC OTAClient.dll ==> C:\DOCUME~1\ALLUSE~1\APPLIC~1\HP\ALM-CL~1\VMWIN2~1\OTACLI~1.DLL
+[2014-04-03 14:32:38 Z] DEBUG : QCRunConnection.win_path_expanded - expanded Registry path to DLL target: C:/Documents and Settings/All Users/Application Data/HP/ALM-Client/vmwin2008qc11/OTAClient.dll
+[2014-04-03 14:32:40 Z]  INFO : QCRunConnection.connect - Connected to Quality Center at http://vmwin2008qc11:8080/qcbin/wcomsrv.dll (version 11.0.0.8258)
+[2014-04-03 14:32:41 Z]  INFO : QCRunConnection.connect -   Domain: DEMO
+[2014-04-03 14:32:41 Z]  INFO : QCRunConnection.connect -   Project: DEMO1
+[2014-04-03 14:32:41 Z]  INFO : RallyTestResultConnection.connect - Connecting to Rally
+[2014-04-03 14:32:48 Z]  INFO : RallyTestResultConnection.connect - Connected to Rally at https://demo01.rallydev.com/slm -  Workspace: Integrations
+[2014-04-03 14:32:48 Z]  INFO : RallyTestResultConnection.connect -   Projects: Shopping Team
+[2014-04-03 14:32:48 Z]  INFO : Connector.validate - Beginning validation
+[2014-04-03 14:32:49 Z]  WARN : RallyTestResultConnection.check_for_warnings - <Warnings>
+    <OperationResultWarning>Please update your client to use the latest version of the API. You can find the latest version at https://demo01.rallydev.com/slm/doc/webservice/index.jsp?version=v2.0. API status is Deprecated and will become Not Supported on 2015-03-11.</OperationResultWarning>
+  </Warnings>
+[2014-04-03 14:32:50 Z] DEBUG : Connector.validate - RallyConnection validate succeeded
+[2014-04-03 14:32:50 Z] DEBUG : QCRunConnection.validate - Quality Center Tests Connection - user entry "sara" detected in config file
+[2014-04-03 14:32:50 Z] DEBUG : QCRunConnection.validate - Quality Center Tests Connection - password entry detected in config file
+[2014-04-03 14:32:50 Z] DEBUG : QCRunConnection.validate - Quality Center Tests Connection - artifact type validated
+[2014-04-03 14:32:50 Z] DEBUG : QCRunConnection.validate - Quality Center Tests Connection - IDField entry "RN_RUN_ID" validated
+[2014-04-03 14:32:50 Z] DEBUG : QCRunConnection.validate - Quality Center Tests Connection - ExternalIDField entry "RN_USER_01" validated
+[2014-04-03 14:32:50 Z] DEBUG : QCRunConnection.validate - Quality Center Tests Connection - FieldHandler target fields existence validated
+[2014-04-03 14:32:50 Z] DEBUG : QCRunConnection.validate - Quality Center Tests Connection - Field Defaults settings validated
+[2014-04-03 14:32:50 Z] DEBUG : Connector.validate - Quality Center Tests Connection validate succeeded
+[2014-04-03 14:32:50 Z] DEBUG : Connector.block in validate - RallyConnection field_mapping target "TestCase" existence validated
+[2014-04-03 14:32:50 Z] DEBUG : Connector.block in validate - Quality Center Tests Connection field_mapping target "RN_TEST_ID" existence validated
+[2014-04-03 14:32:50 Z] DEBUG : Connector.block in validate - RallyConnection field_mapping target "Verdict" existence validated
+[2014-04-03 14:32:50 Z] DEBUG : Connector.block in validate - Quality Center Tests Connection field_mapping target "RN_STATUS" existence validated
+[2014-04-03 14:32:50 Z] DEBUG : Connector.block in validate - RallyConnection field_mapping target "Date" existence validated
+[2014-04-03 14:32:50 Z] DEBUG : Connector.block in validate - Quality Center Tests Connection field_mapping target "RN_EXECUTION_DATE" existence validated
+[2014-04-03 14:32:50 Z] DEBUG : Connector.block in validate - RallyConnection field_mapping target "Build" existence validated
+[2014-04-03 14:32:50 Z] DEBUG : Connector.block in validate - Quality Center Tests Connection field_mapping target "RN_RUN_NAME" existence validated
+[2014-04-03 14:32:50 Z] DEBUG : Connector.block in validate - Rally Connection field_handler validation for "TestCase" succeeded
+[2014-04-03 14:32:50 Z] DEBUG : Connector.block in validate - Quality Center Tests Connection field_handler validation for "RN_EXECUTION_DATE" succeeded
+[2014-04-03 14:32:50 Z] DEBUG : Connector.block in validate - Quality Center Tests Connection field_handler validation for "RN_STATUS" succeeded
+[2014-04-03 14:32:50 Z]  INFO : Connector.validate - Validation complete
+[2014-04-03 14:32:50 Z]  INFO : ConnectorRunner.run_services - Last Run 2014-02-06 17:20:06 UTC  --- Now 2014-04-03 14:32:50 UTC
+[2014-04-03 14:32:50 Z]  INFO : ConnectorRunner.process_service - Starting Service COPY_QUALITY CENTER TESTS_TO_RALLY
+[2014-04-03 14:32:50 Z]  INFO : QCRunConnection.find_new - find_new query: RN_USER_01 = "" and RN_EXECUTION_DATE >= "2014-04-02"
+[2014-04-03 14:32:50 Z] DEBUG : QCRunConnection.find_new - find_new returned 4 total Test Runs
+[2014-04-03 14:32:50 Z] DEBUG : QCRunConnection.find_new - find_new    found 4 Test Runs with corresponding Rally tests
+[2014-04-03 14:32:50 Z]  INFO : QCRunConnection.find_new -   Found 4 New runs in QC
+[2014-04-03 14:32:50 Z]  INFO : Connector.copy_to_rally - Copy to Rally
+[2014-04-03 14:32:51 Z] DEBUG : Connector.block in map_fields_to_rally -   Mapping RN_TEST_ID(58) - to - TestCase(New Test2Test)
+[2014-04-03 14:32:51 Z] DEBUG : Connector.block in map_fields_to_rally -   Mapping RN_STATUS(Passed) - to - Verdict(Pass)
+[2014-04-03 14:32:51 Z] DEBUG : Connector.block in map_fields_to_rally -   Mapping RN_EXECUTION_DATE(2014-04-03 00:00:00 -0600) - to - Date(2014-04-03 14:31:35 UTC)
+[2014-04-03 14:32:51 Z] DEBUG : Connector.block in map_fields_to_rally -   Mapping RN_RUN_NAME(Run_4-3_8-31-14) - to - Build(Run_4-3_8-31-14)
+[2014-04-03 14:32:52 Z]  INFO : RallyTestResultConnection.create_internal -   Created 
+[2014-04-03 14:32:52 Z] DEBUG : QCRunConnection.update_external_id_fields - set QC Run RN_RUN_ID: 90  external id field RN_USER_01 --> |4859864|
+[2014-04-03 14:32:52 Z]  INFO : Connector.copy_to_rally - Quality Center Tests run 90 copied to Rally testcaseresult 
+[2014-04-03 14:32:52 Z]  INFO : Connector.copy_to_rally - Copy to Rally
+[2014-04-03 14:32:52 Z]  WARN : RallyReferenceFieldHandler.initialize - Could not find Rally TestCase with q_c_test_i_d - 44
+[2014-04-03 14:32:52 Z]  WARN : ConnectorRunner.exception - Message Could not find Rally TestCase with q_c_test_i_d - 44
+[2014-04-03 14:32:52 Z]  INFO : Connector.copy_to_rally - Copy to Rally
+[2014-04-03 14:32:52 Z]  WARN : RallyReferenceFieldHandler.initialize - Could not find Rally TestCase with q_c_test_i_d - 43
+[2014-04-03 14:32:52 Z]  WARN : ConnectorRunner.exception - Message Could not find Rally TestCase with q_c_test_i_d - 43
+[2014-04-03 14:32:52 Z]  INFO : Connector.copy_to_rally - Copy to Rally
+[2014-04-03 14:32:53 Z]  WARN : RallyReferenceFieldHandler.initialize - Could not find Rally TestCase with q_c_test_i_d - 42
+[2014-04-03 14:32:53 Z]  WARN : ConnectorRunner.exception - Message Could not find Rally TestCase with q_c_test_i_d - 42
+[2014-04-03 14:32:53 Z]  INFO : ConnectorRunner.process_service - Finished Service COPY_QUALITY CENTER TESTS_TO_RALLY
+[2014-04-03 14:32:54 Z]  INFO : QCRunConnection.disconnect - Disconnected from Quality Center
+[2014-04-03 14:32:54 Z]  INFO : ConnectorRunner.run_services - time file written with value of 2014-04-03 14:32:50 UTC
+[2014-04-03 14:32:54 Z]  INFO : ConnectorRunner.block in log_service_statistics - qc_config_run.xml: 1 items copied from Quality center tests to Rally 
+[2014-04-03 14:32:54 Z]  INFO : ConnectorRunner.log_service_statistics - qc_config_run.xml: service run took 16 seconds

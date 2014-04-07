@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<config>
+  <RallyConnection>
+    <Url>demo01.rallydev.com</Url>
+    <WorkspaceName>Integrations</WorkspaceName>
+    <Projects>
+      <Project>Shopping Team</Project>
+    </Projects>
+    <User>sara@acme.com</User>
+    <Password>encoded-S-n-V-z-d-D-R-S-Y-W-x-s-e-Q-=-=-</Password>
+    <ArtifactType>TestCase</ArtifactType>
+    <ExternalIDField>QCTestID</ExternalIDField>
+  </RallyConnection>
+
+  <QCConnection>
+    <Url>vmwin2008qc11:8080</Url>
+    <Domain>DEMO</Domain>
+    <Project>DEMO1</Project>
+    <User>sara</User>
+    <Password>encoded-c-m-F-s-b-H-l-k-Z-X-Y-=-</Password>
+    <ArtifactType>TEST</ArtifactType>
+    <IDField>TS_TEST_ID</IDField>
+    <ExternalIDField>TS_USER_01</ExternalIDField>
+	<ExternalEndUserIDField>TS_USER_02</ExternalEndUserIDField>
+    <CopySelectors>
+        <CopySelector>TS_USER_04 = Y</CopySelector>
+    </CopySelectors>
+  </QCConnection>
+
+  <Connector>
+    <FieldMapping>
+      <Field><Rally>Name</Rally><Other>TS_NAME</Other></Field>
+	  <Field><Rally>Description</Rally><Other>TS_DESCRIPTION</Other></Field>
+	  <Field><Rally>WorkProduct</Rally><Other>TS_USER_03</Other></Field>
+    </FieldMapping>
+	
+	<RallyFieldHandlers>
+		<RallyReferenceFieldHandler>
+			<FieldName>WorkProduct</FieldName>
+			<ReferencedFieldLookupID>FormattedID</ReferencedFieldLookupID>
+		</RallyReferenceFieldHandler>
+	</RallyFieldHandlers>
+
+    <OtherFieldHandlers>
+	<QCRtfFieldHandler>
+           <FieldName>TS_DESCRIPTION</FieldName>
+        </QCRtfFieldHandler>
+    </OtherFieldHandlers>
+	
+  </Connector>
+
+  <ConnectorRunner>
+    <Preview>false</Preview>
+    <LogLevel>Debug</LogLevel>
+    <Services>UPDATE_OTHER_TO_RALLY, COPY_OTHER_TO_RALLY</Services>
+  </ConnectorRunner>
+</config>

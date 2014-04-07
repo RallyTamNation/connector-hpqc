@@ -1,0 +1,50 @@
+<Config>
+	<RallyConnection>
+	    <Url>rally1.rallydev.com</Url>
+	    <WorkspaceName>Workspace Name</WorkspaceName>
+	    <Projects>
+	        <Project>Project Name 1</Project>
+        </Projects>
+	    <User>user@company.com</User>
+	    <Password>password</Password>
+        <ArtifactType>Defect</ArtifactType>
+	    <ExternalIDField>ExternalID</ExternalIDField>
+   <!-- <UpdateSelectors>
+            <UpdateSelector>State = Open</UpdateSelector>
+            <UpdateSelector>Priority = High</UpdateSelector>
+        </UpdateSelectors>
+        <FieldDefaults>
+            <Field><Name>RootCause</Name><Default>Undefined</Default></Field>
+        </FieldDefaults>
+   -->
+    </RallyConnection>
+
+	<QCConnection>
+        <Url>server:port</Url>
+        <Domain>Domain Name</Domain>
+        <Project>Project Name</Project>
+        <User>qcusername</User>
+        <Password>password</Password>
+        <ArtifactType>BUG</ArtifactType>
+   <!-- <CopySelectors>
+            <CopySelector>State = Open</CopySelector>
+            <CopySelector>Priority = High</CopySelector>
+        </CopySelectors>
+   -->
+        <IDField>BG_BUG_ID</IDField>
+		<ExternalIDField>BG_USER_xx</ExternalIDField>
+        <ExternalEndUserIDField>BG_USER_xx</ExternalEndUserIDField>
+	</QCConnection>
+
+	<Connector>
+		<FieldMapping>
+			<Field><Rally>Name</Rally><Other>BG_SUMMARY</Other></Field>
+		</FieldMapping>
+	</Connector>
+
+    <ConnectorRunner>
+        <Preview>False</Preview>
+        <LogLevel>Debug</LogLevel>
+        <Services>UPDATE_RALLY_TO_QC,  COPY_QC_TO_RALLY</Services>
+    </ConnectorRunner>
+</Config>

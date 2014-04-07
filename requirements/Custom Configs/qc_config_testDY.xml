@@ -1,0 +1,58 @@
+<Config>
+	<RallyConnection>
+		<Url>rally1.rallydev.com</Url>
+		<WorkspaceName>Workspace Name</WorkspaceName>
+		<Projects>
+			<Project>Project Name 1</Project>
+		</Projects>
+		<User>user@company.com</User>
+		<Password>password</Password>
+		<ArtifactType>TestCase</ArtifactType>
+		<ExternalIDField>ExternalID</ExternalIDField>
+	<!--	<CopySelectors>
+			<CopySelector>State = Open</CopySelector>
+			<CopySelector>Priority = High</CopySelector>
+		</CopySelectors>
+	-->
+	</RallyConnection>
+
+	<QCConnection>
+		<Url>server:port</Url>
+		<Domain>Domain Name</Domain>
+		<Project>Project Name</Project>
+		<User>qcusername</User>
+		<Password>password</Password>
+		<ArtifactType>TEST</ArtifactType>
+		<TestFolder>MyTestFolder</TestFolder>
+		<IDField>TS_TEST_ID</IDField>
+		<ExternalIDField>TS_USER_xx</ExternalIDField>
+	</QCConnection>
+
+	<Connector>
+		<FieldMapping>
+			<Field><Rally>Name</Rally><Other>TS_NAME</Other></Field>
+			<Field><Rally>Requirement</Rally>
+				<Other>TS_LINKED_REQ</Other>
+				<Direction>TO_RALLY</Direction>
+			</Field>
+		</FieldMapping>
+		<OtherFieldHandlers>
+			<QCReqLinkFieldHandler>
+				<FieldName>TS_LINKED_REQ</FieldName>
+				<ReqRallyIDField>RQ_USER_01</ReqRallyIDField>
+			</QCReqLinkFieldHandler>
+		</OtherFieldHandlers>
+		<RallyFieldHandlers>
+			<RallyReferenceFieldHandler>
+				<FieldName>Requirement</FieldName>
+				<ReferencedFieldLookupID>ObjectID</ReferencedFieldLookupID>
+			</RallyReferenceFieldHandler>
+
+	</Connector>
+
+	<ConnectorRunner>
+		<Preview>False</Preview>
+		<LogLevel>Debug</LogLevel>
+		<Services>UPDATE_QC_TO_RALLY,  COPY_QC_TO_RALLY</Services>
+	</ConnectorRunner>
+</Config>

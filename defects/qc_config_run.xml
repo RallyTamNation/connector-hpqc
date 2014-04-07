@@ -1,0 +1,70 @@
+<Config>
+	<RallyTestResultConnection>
+		<Url>rally1.rallydev.com</Url>
+		<WorkspaceName>Workspace Name</WorkspaceName>
+		<Projects>
+			<Project>Project Name 1</Project>
+		</Projects>
+		<User>user@company.com</User>
+		<Password>password</Password>
+		<ArtifactType>TestCaseResult</ArtifactType>
+	</RallyTestResultConnection>
+
+	<QCRunConnection>
+		<Url>server:port</Url>
+		<Domain>Domain Name</Domain>
+		<Project>Project Name</Project>
+		<User>qcusername</User>
+		<Password>password</Password>
+		<ArtifactType>RUN</ArtifactType>
+		<TestFolder>MyTestRunFolder</TestFolder>
+		<IDField>RN_RUN_ID</IDField>
+		<ExternalIDField>RN_USER_xx</ExternalIDField>
+		<!-- QC user field on TEST table that stores the unique id for the Rally work item -->
+		<TestExternalIDField>TS_USER_xx</TestExternalIDField>
+		<RunDaysToSearch>2</RunDaysToSearch>
+	</QCRunConnection>
+
+	<Connector>
+		<FieldMapping>
+			<!-- Required fields in Rally: TestCase, Verdict, Date and Build -->
+			<!-- Do not remove the following 4 field mappings -->
+			<Field><Rally>TestCase</Rally>	<Other>RN_TEST_ID</Other></Field>
+			<Field><Rally>Verdict</Rally>	<Other>RN_STATUS</Other></Field>
+			<Field><Rally>Date</Rally>	<Other>RN_EXECUTION_DATE</Other></Field>
+			<Field><Rally>Build</Rally>	<Other>RN_RUN_NAME</Other></Field>
+		</FieldMapping>
+
+		<RallyFieldHandlers>
+			<!-- Required field handler: Determines how to lookup the associated test in Rally -->
+			<RallyReferenceFieldHandler>
+				<FieldName>TestCase</FieldName>
+				<!-- Custom field on Rally TestCase to store the unique id for linked QC test -->
+				<ReferencedFieldLookupID>ExternalID</ReferencedFieldLookupID>
+			</RallyReferenceFieldHandler>
+		</RallyFieldHandlers>
+
+		<OtherFieldHandlers>
+			<!-- Required field handler: Determines how to convert QC run date to Rally date -->
+			<QCRunDateFieldHandler>
+				<FieldName>RN_EXECUTION_DATE</FieldName>
+			</QCRunDateFieldHandler>
+
+			<OtherEnumFieldHandler>
+				<FieldName>RN_STATUS</FieldName>
+				<Mappings>
+					<!-- Add additional mappings between Rally verdict and RN_STATUS -->
+					<Field><Rally>Fail</Rally>	<Other>Failed</Other></Field>
+					<Field><Rally>Pass</Rally>	<Other>Passed</Other></Field>
+				</Mappings>
+			</OtherEnumFieldHandler>
+		</OtherFieldHandlers>
+	</Connector>
+
+	<ConnectorRunner>
+		<Preview>False</Preview>
+		<LogLevel>Debug</LogLevel>
+		<!--- Only the COPY_QC_TO_RALLY service is supported for RUNs -->
+		<Services>COPY_QC_TO_RALLY</Services>
+	</ConnectorRunner>
+</Config>
